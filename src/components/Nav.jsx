@@ -23,11 +23,11 @@ const Nav = ({ isBurgerActive, setIsBurgerActive }) => {
   }
   if (router.pathname === "/") {
     IsHomeActive = true
-  } else if (router.pathname === "/about") {
+  } else if (router.pathname === "/About") {
     IsAboutActive = true
-  } else if (router.pathname === "/projects") {
+  } else if (router.pathname === "/Projects") {
     IsProjectsActive = true
-  } else if (router.pathname === "/contact") {
+  } else if (router.pathname === "/Contact") {
     IsContactActive = true
   }
   const links = [
@@ -40,19 +40,19 @@ const Nav = ({ isBurgerActive, setIsBurgerActive }) => {
     {
       id: 2,
       name: "_about_me",
-      path: "/about",
+      path: "/About",
       clas: IsAboutActive ? Style.Active : ""
     },
     {
       id: 3,
       name: "_projects",
-      path: "/projects",
+      path: "/Projects",
       clas: IsProjectsActive ? Style.Active : ""
     },
     {
       id: 4,
       name: "_contact",
-      path: "/contact",
+      path: "/Contact",
       clas: IsContactActive ? Style.Active : ""
     }
   ]
