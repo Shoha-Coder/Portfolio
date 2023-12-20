@@ -1,0 +1,23 @@
+@import "./vars.scss";
+.BurgerMenu {
+  display: none;
+}
+.BurgerMenuActive {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  .Active {
+    border-bottom: toRem(2) solid $accent1;
+  }
+  a{
+    width: 100%;
+    display: flex;
+    height: toRem(55);
+    padding-left: toRem(25);
+    align-items: center;
+    border-bottom: toRem(2) solid $line;
+  }
+}

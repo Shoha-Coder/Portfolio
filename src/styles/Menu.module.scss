@@ -1,0 +1,11 @@
+@import "./vars.scss";
+.wrapper {
+  position: relative;
+  width: toRem(510);
+  height: toRem(475);
+  border: toRem(1) solid #0ef;
+  border-radius: toRem(8);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

@@ -1,0 +1,419 @@
+@import "./vars.scss";
+.game_area {
+  position: relative;
+  width: toRem(238.69);
+  height: toRem(405.32);
+  border-radius: toRem(8);
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: toRem(1) toRem(5) toRem(11) 0 #02121bb5 inset;
+  background-color: #011627d6;
+  margin-left: toRem(30.31);
+  &_ {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: toRem(238.69);
+    height: toRem(405.32);
+    border-radius: toRem(8);
+    box-shadow: toRem(1) toRem(5) toRem(11) 0 #02121bb5 inset;
+    background-color: #011627d6;
+    margin-left: toRem(30.31);
+    justify-content: center;
+    align-items: center;
+    gap: toRem(70);
+    img {
+      width: toRem(62.35);
+    }
+    &game_over {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: toRem(238.69);
+      height: toRem(405.32);
+      border-radius: toRem(8);
+      box-shadow: toRem(1) toRem(5) toRem(11) 0 #02121bb5 inset;
+      background-color: #011627d6;
+      margin-left: toRem(30.31);
+      justify-content: center;
+      align-items: center;
+      gap: toRem(70);
+      img {
+        width: toRem(62.35);
+        margin-bottom: toRem(-50);
+      }
+      h1 {
+        width: toRem(239);
+        height: toRem(48);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: toRem(24);
+        box-shadow: toRem(1) toRem(5) toRem(11) 0 #02121bb5 inset;
+        background-color: #011627d6;
+        border-radius: toRem(8);
+        margin-top: 0;
+        margin-bottom: toRem(-40);
+        color: $accent2;
+      }
+      h4 {
+        cursor: pointer;
+      }
+    }
+    &game_win {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: toRem(238.69);
+      height: toRem(405.32);
+      border-radius: toRem(8);
+      box-shadow: toRem(1) toRem(5) toRem(11) 0 #02121bb5 inset;
+      background-color: #011627d6;
+      margin-left: toRem(30.31);
+      justify-content: center;
+      align-items: center;
+      gap: toRem(70);
+      img {
+        width: toRem(113);
+        margin-bottom: toRem(-130);
+      }
+      h1 {
+        width: toRem(239);
+        height: toRem(48);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: toRem(24);
+        box-shadow: toRem(1) toRem(5) toRem(11) 0 #02121bb5 inset;
+        background-color: #011627d6;
+        border-radius: toRem(8);
+        margin-top: 0;
+        margin-bottom: toRem(-40);
+        color: $accent2;
+      }
+      h4 {
+        cursor: pointer;
+        color: $secondary4;
+      }
+    }
+  }
+}
+
+.snake {
+  position: absolute;
+  width: toRem(6);
+  height: toRem(6);
+  background-color: #43d9ad;
+  z-index: 2;
+  border-radius: toRem(2);
+}
+
+.food {
+  position: absolute;
+  width: toRem(10);
+  height: toRem(10);
+  z-index: 1;
+}
+.wrapper {
+  .ContainerRight {
+    .buttons {
+      margin-top: toRem(-130);
+      margin-left: toRem(37.5);
+      background-image: url("../images/Background\ Rules.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: toRem(181.38);
+      height: toRem(142);
+      h3 {
+        font-size: $s;
+        margin-left: toRem(13.19);
+        color: $secondary4;
+        &:nth-child(1) {
+          padding-top: toRem(15);
+        }
+      }
+      .Buttons {
+        margin-top: toRem(15);
+        text-align: center;
+        .Up {
+          text-align: center;
+        }
+      }
+    }
+    .FoodLeft {
+      h3 {
+        font-size: $s;
+      }
+      .Images {
+        display: flex;
+        margin-top: toRem(10);
+        width: toRem(131.46);
+        img {
+          width: toRem(20.69);
+        }
+      }
+    }
+    .SkipBtn {
+      position: relative;
+      bottom: toRem(-130);
+      right: toRem(-150);
+      height: toRem(40);
+      background-color: transparent;
+      color: $secondary4;
+      border: toRem(1) solid $secondary4;
+      &:hover {
+        background-color: $start;
+        border: none;
+      }
+      &:active {
+        font-size: $s;
+      }
+    }
+  }
+  width: toRem(510);
+  height: toRem(475);
+  border: toRem(1) solid #0c1616;
+  border-radius: toRem(8);
+  display: flex;
+  flex-wrap: wrap;
+  background-image: url("../images/Background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  &_ {
+    width: toRem(510);
+    height: toRem(475);
+    border: toRem(1) solid #0c1616;
+    border-radius: toRem(8);
+    display: flex;
+    background-image: url("../images/Background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-items: center;
+
+    .ContainerRight {
+      .buttons {
+        margin-top: toRem(-130);
+        margin-left: toRem(37.5);
+        background-image: url("../images/Background\ Rules.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: toRem(181.38);
+        height: toRem(142);
+        h3 {
+          font-size: $s;
+          margin-left: toRem(13.19);
+          color: $secondary4;
+          &:nth-child(1) {
+            padding-top: toRem(15);
+          }
+        }
+        .Buttons {
+          margin-top: toRem(15);
+          text-align: center;
+          .Up {
+            text-align: center;
+          }
+        }
+      }
+      .FoodLeft {
+        h3 {
+          font-size: $s;
+        }
+        .Images {
+          display: flex;
+          margin-top: toRem(10);
+          width: toRem(131.46);
+          img {
+            width: toRem(20.69);
+          }
+        }
+      }
+      .SkipBtn {
+        position: relative;
+        bottom: toRem(-130);
+        right: toRem(-150);
+        height: toRem(40);
+        background-color: transparent;
+        color: $secondary4;
+        border: toRem(1) solid $secondary4;
+        &:hover {
+          background-color: $start;
+          border: none;
+        }
+        &:active {
+          font-size: $s;
+        }
+      }
+    }
+    .FoodLeft {
+      left: toRem(37.5);
+      position: relative;
+
+      h3 {
+        font-size: $s;
+        margin-top: toRem(20.58);
+        color: $secondary4;
+      }
+      .Images {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap-reverse;
+        margin-top: toRem(10);
+        width: toRem(121.46);
+        padding-right: toRem(7);
+        gap: toRem(5);
+        justify-content: center;
+        align-items: center;
+        img {
+          width: toRem(20.69);
+        }
+      }
+    }
+  }
+  .ContainerRight {
+    .buttons {
+      margin-top: toRem(-170);
+      margin-left: toRem(37.5);
+      background-image: url("../images/Background\ Rules.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: toRem(181.38);
+      height: toRem(142);
+      h3 {
+        font-size: $s;
+        margin-left: toRem(13.19);
+        color: $secondary4;
+        &:nth-child(1) {
+          padding-top: toRem(15);
+        }
+      }
+      .Buttons {
+        margin-top: toRem(15);
+        text-align: center;
+        .Up {
+          text-align: center;
+        }
+      }
+    }
+    .FoodLeft {
+      left: toRem(37.5);
+      position: relative;
+      h3 {
+        font-size: $s;
+        margin-top: toRem(20);
+        color: $secondary4;
+      }
+      .Images {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap-reverse;
+        margin-top: toRem(10);
+        width: toRem(125.46);
+        gap: toRem(5);
+        justify-content: center;
+        align-items: center;
+        img {
+          width: toRem(20.69);
+        }
+      }
+    }
+  }
+}
+.wrapper_game_over {
+  .FoodLeft {
+    left: toRem(37.5);
+    position: relative;
+
+    h3 {
+      font-size: $s;
+      margin-top: toRem(20.58);
+      color: $secondary4;
+    }
+    .Images {
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap-reverse;
+      margin-top: toRem(10);
+      width: toRem(121.46);
+      padding-right: toRem(7);
+      gap: toRem(5);
+      justify-content: center;
+      align-items: center;
+      img {
+        width: toRem(20.69);
+      }
+    }
+  }
+  width: toRem(510);
+  height: toRem(475);
+  border: toRem(1) solid #0c1616;
+  border-radius: toRem(8);
+  display: flex;
+  background-image: url("../images/Background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  .ContainerRight {
+    .buttons {
+      margin-top: toRem(-130);
+      margin-left: toRem(37.5);
+      background-image: url("../images/Background\ Rules.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: toRem(181.38);
+      height: toRem(142);
+      h3 {
+        font-size: $s;
+        margin-left: toRem(13.19);
+        color: $secondary4;
+        &:nth-child(1) {
+          padding-top: toRem(15);
+        }
+      }
+      .Buttons {
+        margin-top: toRem(15);
+        text-align: center;
+        .Up {
+          text-align: center;
+        }
+      }
+    }
+    .FoodLeft {
+      h3 {
+        font-size: $s;
+      }
+      .Images {
+        display: flex;
+        margin-top: toRem(10);
+        width: toRem(131.46);
+        img {
+          width: toRem(20.69);
+        }
+      }
+    }
+    .SkipBtn {
+      position: relative;
+      bottom: toRem(-130);
+      right: toRem(-150);
+      height: toRem(40);
+      background-color: transparent;
+      color: $secondary4;
+      border: toRem(1) solid $secondary4;
+      &:hover {
+        background-color: $start;
+        border: none;
+      }
+      &:active {
+        font-size: $s;
+      }
+    }
+  }
+}

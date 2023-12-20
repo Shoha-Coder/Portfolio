@@ -1,0 +1,91 @@
+@import "./vars.scss";
+.footer {
+  width: 100%;
+  height: toRem(60);
+  border-top: toRem(2) solid $line;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  ._left_side {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    h2 {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      font-size: $l;
+      padding-left: toRem(22);
+      padding-right: toRem(18);
+      cursor: pointer;
+    }
+    .Insta {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      border-left: toRem(2) solid $line;
+      border-right: toRem(2) solid $line;
+      .InstaIcon {
+        width: toRem(52);
+        font-size: toRem(24);
+        &:hover {
+          fill: $secondary4;
+          transition: 0.5s ease;
+        }
+      }
+    }
+    .Fc {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: toRem(2) solid $line;
+      .FcIcon {
+        width: toRem(52);
+        font-size: toRem(24);
+        &:hover {
+          fill: $secondary4;
+          transition: 0.5s ease;
+        }
+      }
+    }
+  }
+  .GitHub {
+    width: toRem(181);
+    height: 100%;
+    align-items: center;
+    padding-right: toRem(22);
+    display: flex;
+    justify-content: end;
+    border-left: toRem(2) solid $line;
+    &:hover {
+      .GitHubIcon {
+        fill: $secondary4;
+        transition: 0.5s ease;
+      }
+      a {
+        color: $secondary4;
+        transition: 0.5s ease;
+      }
+    }
+    .GitHubIcon {
+      font-size: toRem(24);
+      margin-left: toRem(3);
+    }
+  }
+}
+@include BreakpointDown(471) {
+  .footer {
+    .GitHub{
+      width: toRem(52);
+      padding-right: 0;
+      margin-right: toRem(22);
+      a{
+        display: none;
+      }
+      .GitHubIcon{
+        margin-left: 0;
+      }
+    }
+  }
+}

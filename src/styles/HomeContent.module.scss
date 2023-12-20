@@ -1,0 +1,105 @@
+@import "./vars.scss";
+.HomeContent {
+  display: flex;
+  flex-direction: column;
+  gap: toRem(82);
+  .Top {
+    h3 {
+      font-size: $x;
+      color: #e5e9f0;
+    }
+    h1 {
+      font-size: $xxl;
+      color: #e5e9f0;
+    }
+    h2 {
+      font-size: $xl;
+      color: $secondary3;
+    }
+  }
+  .Bottom {
+    display: flex;
+    flex-direction: column;
+    gap: toRem(10);
+    h3 {
+      &:nth-child(3) {
+        display: none;
+      }
+      &:nth-child(4) {
+        .const {
+          color: $secondary3;
+        }
+        .GithubLink {
+          color: $gradient2;
+        }
+        a {
+          color: $accent3;
+        }
+        .brake {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@include BreakpointDown(1370) {
+  .HomeContent {
+    width: 100%;
+    height: 100%;
+    align-items: start;
+    justify-content: center;
+    padding-left: toRem(150);
+    .Bottom {
+      margin-top: toRem(195);
+      h3 {
+        display: none;
+        &:nth-child(3) {
+          display: block;
+        }
+        &:nth-child(4) {
+          display: block;
+          font-weight: 500;
+          height: toRem(40);
+        }
+      }
+    }
+  }
+}
+@include BreakpointDown(800) {
+  .HomeContent {
+    padding-left: toRem(100);
+  }
+}
+@include BreakpointDown(720) {
+  .HomeContent {
+    padding-left: toRem(27);
+  }
+}
+@include BreakpointDown(640) {
+  .HomeContent {
+    .Bottom {
+      h3 {
+        &:nth-child(4) {
+          width: toRem(315);
+          a {
+            .brake {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include BreakpointDown(485) {
+    .HomeContent {
+        .Top{
+            h1{
+                font-size: toRem(52);
+            }
+            h2{
+                font-size: $x;
+            }
+        }
+    }
+}
