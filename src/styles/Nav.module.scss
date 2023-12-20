@@ -1,0 +1,86 @@
+@import "./vars.scss";
+.nav {
+  height: toRem(56.19);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: toRem(2) solid $line;
+  ._left {
+    display: flex;
+    width: toRem(674);
+    align-items: center;
+    height: 100%;
+    .My_NickName {
+      width: toRem(311);
+      display: flex;
+      align-items: center;
+      padding-left: toRem(22);
+      height: 100%;
+    }
+    &_side {
+      display: flex;
+      width: toRem(674);
+      align-items: center;
+      height: 100%;
+      .links {
+        width: toRem(450);
+        height: 100%;
+        display: flex;
+        text-align: center;
+        a {
+          width: toRem(150);
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+  .Contact {
+    min-width: toRem(153);
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    border-left: toRem(2) solid $line;
+    border-right: none;
+    align-items: center;
+    padding-right: toRem(22);
+  }
+  a {
+    font-size: $l;
+    color: $secondary1;
+    border-right: toRem(2) solid $line;
+  }
+  .Active {
+    border-bottom: toRem(3) solid $accent1;
+  }
+}
+@include BreakpointDown(969) {
+  .nav {
+    .Contact {
+      border-left: none;
+      justify-content: center;
+      padding-right: 0;
+    }
+  }
+}
+@include BreakpointDown(946) {
+  .nav {
+    ._left {
+      .My_NickName {
+        border-right: none;
+      }
+      &_side {
+        display: none;
+      }
+    }
+    .Contact {
+      display: none;
+    }
+    .Active {
+      border-bottom: none;
+    }
+  }
+}
