@@ -1,18 +1,26 @@
 @import "./vars.scss";
 .BurgerMenu {
-  display: none;
+  transition: .0s linear;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
 }
 .BurgerMenuActive {
+  transition: .5s linear;
+  position: static;
+  opacity: 1;
+  visibility: visible;
   display: flex;
-  justify-content: start;
-  align-items: start;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
   width: 100%;
   height: 100%;
   .Active {
     border-bottom: toRem(2) solid $accent1;
+    color: $secondary4;
   }
-  a{
+  a {
     width: 100%;
     display: flex;
     height: toRem(55);

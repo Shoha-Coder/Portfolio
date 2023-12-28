@@ -3,7 +3,7 @@
   import Style from "@/styles/Home.module.scss";
   import HomeContent from "@/components/HomeContent";
   import Game from "@/components/Snake/Game";
-  import Container from "@/components/Container";
+  import Container from "@/components/Container"
 
   export default function Home() {
     return (
