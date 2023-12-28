@@ -39,7 +39,7 @@ const Nav = ({ isBurgerActive, setIsBurgerActive }) => {
     },
     {
       id: 2,
-      name: "_about_me",
+      name: "_about-me",
       path: "/About",
       clas: IsAboutActive ? Style.Active : ""
     },
@@ -51,7 +51,7 @@ const Nav = ({ isBurgerActive, setIsBurgerActive }) => {
     },
     {
       id: 4,
-      name: "_contact",
+      name: "_contact-me",
       path: "/Contact",
       clas: IsContactActive ? Style.Active : ""
     }
@@ -72,10 +72,10 @@ const Nav = ({ isBurgerActive, setIsBurgerActive }) => {
           </div>
         </div>
       </div>
-      <Link className={`${Style.Contact} ${IsContactActive ? Style.Active : ""}`} href={"/contact"}>_contact</Link>
+      <Link className={`${Style.Contact} ${IsContactActive ? Style.Active : ""}`} href={"/contact"}>_contact-me</Link>
       <Burger click={burgerClick} children={burger} />
     </nav>
   )
 }
 
-export default Nav
+export default Nav;

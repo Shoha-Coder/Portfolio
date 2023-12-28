@@ -7,6 +7,13 @@
   font-family: "Fira Code", monospace;
   font-weight: 450;
   color: $secondary1;
+  user-select: none;
+  cursor: pointer;
+}
+@include BreakpointDown(768) {
+  *{
+    cursor: auto;
+  }
 }
 
 html,

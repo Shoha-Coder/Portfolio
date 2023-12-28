@@ -56,7 +56,7 @@
     align-items: center;
     padding-right: toRem(22);
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     border-left: toRem(2) solid $line;
     &:hover {
       .GitHubIcon {

@@ -42,7 +42,7 @@
     min-width: toRem(153);
     height: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     border-left: toRem(2) solid $line;
     border-right: none;
     align-items: center;
@@ -55,6 +55,7 @@
   }
   .Active {
     border-bottom: toRem(3) solid $accent1;
+    color: $secondary4;
   }
 }
 @include BreakpointDown(969) {
