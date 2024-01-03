@@ -86,8 +86,8 @@
         width: 100%;
         gap: toRem(8.28);
         padding-left: toRem(37.64);
-        margin-top: toRem(5);
-        margin-bottom: toRem(5);
+        margin-top: 5px;
+        margin-bottom: 5px;
         &.Active {
           transition: 0.5s ease;
           position: static;
