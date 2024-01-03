@@ -16,9 +16,14 @@
     margin: toRem(69);
   }
 }
-@include BreakpointDown(946) {
+@include BreakpointDown(1555) {
   .Container {
-    margin: toRem(15);
+    .Children {
+      &.Projects {
+        min-height: toRem(600);
+        height: auto;
+      }
+    }
   }
 }
 @include BreakpointDown(1126) {
@@ -30,5 +35,10 @@
         min-height: toRem(841);
       }
     }
+  }
+}
+@include BreakpointDown(946) {
+  .Container {
+    margin: toRem(15);
   }
 }

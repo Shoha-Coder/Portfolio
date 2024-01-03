@@ -1,0 +1,104 @@
+@import "./vars.scss";
+
+.ProjectsFilterSide {
+  width: toRem(311);
+  border-right: toRem(2) solid $line;
+  .Dropdown {
+    position: relative;
+    width: 100%;
+    .Title {
+      width: 100%;
+      height: toRem(40.53);
+      align-items: center;
+      justify-content: center;
+      padding-left: toRem(22);
+      padding-top: toRem(6.5);
+      transition: 0.5s ease;
+      border-bottom: toRem(2) solid $line;
+      &:hover {
+        color: $secondary4;
+        transition: 0.5s ease;
+        img {
+          filter: brightness(1000);
+        }
+      }
+    }
+    &.Active {
+      h3 {
+        color: $secondary4;
+        transition: 0.5s ease;
+      }
+      img {
+        transform: rotate(90deg);
+        filter: brightness(1000);
+      }
+    }
+    .DropdownItem {
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      &.Active {
+        transition: 0.5s ease;
+        position: static;
+        opacity: 1;
+        visibility: visible;
+      }
+      h3 {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: toRem(22);
+        padding-top: toRem(18.97);
+        padding-bottom: toRem(18.97);
+        color: $secondary1;
+        font-weight: 400;
+        &.Active {
+          color: $secondary4;
+          .Icon {
+            filter: brightness(1000);
+          }
+        }
+        input {
+          margin-right: toRem(24);
+          width: toRem(18.81);
+          height: toRem(18.81);
+          border-radius: toRem(2);
+          background-color: $secondary1;
+          accent-color: $secondary1;
+          background: transparent;
+          color: $secondary4;
+          appearance: none;
+          border: toRem(1) solid $secondary1;
+          transition: .5s ease;
+        }
+        :checked{
+            transition: .5s ease;
+            appearance: auto;
+        }
+        .Icon {
+          margin-right: toRem(10);
+        }
+      }
+    }
+  }
+}
+@include BreakpointDown(1198) {
+  .ProjectsFilterSide {
+    width: 100%;
+    border: none;
+    .Dropdown {
+      margin-top: toRem(2);
+      margin-bottom: toRem(2);
+      .Title {
+        border: none;
+        background-color: $line;
+      }
+      &.UnActive {
+        display: block;
+      }
+    }
+  }
+}
