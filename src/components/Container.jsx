@@ -12,7 +12,7 @@ const Container = ({ children }) => {
   return (
     <div className={Style.Container}>
       <Nav isBurgerActive={isBurgerActive} setIsBurgerActive={setIsBurgerActive} />
-      <div className={`${Style.Children} ${router.pathname === "/About" ? Style.About : ""}`}>
+      <div className={`${Style.Children} ${router.pathname === "/About" ? Style.About : router.pathname === "/Projects" ? Style.Projects : ""}`}>
         <BurgerMenu className={isBurgerActive === true ? BurgerMenuStyle.BurgerMenuActive : ""} />
         {!isBurgerActive && children}
       </div>

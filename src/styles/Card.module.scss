@@ -1,0 +1,63 @@
+@import "./vars.scss";
+
+.CardContainer {
+  width: toRem(370.35);
+  margin: auto;
+  &.Mini{
+      width: toRem(291);
+      height: toRem(328);
+      margin: auto;
+    }
+  .Card {
+    width: toRem(370.35);
+    height: toRem(314.82);
+    overflow: hidden;
+    background-color: $primary3;
+    border-radius: toRem(15);
+    border: toRem(1) solid $line;
+    &.Mini{
+      width: toRem(291);
+      height: toRem(328);
+      margin: auto;
+    }
+    .ProjectImage {
+      width: 100%;
+      height: toRem(145);
+      transition: 0.5s ease;
+      &:hover {
+        transform: scale(1.1);
+        transition: 0.5s ease;
+      }
+    }
+    .CategoryImage {
+      width: toRem(28);
+      height: toRem(28);
+      position: relative;
+      top: toRem(-129);
+      right: toRem(-325.65);
+    }
+    .Description {
+      margin-left: toRem(31);
+      margin-right: toRem(34.66);
+    }
+    .ProjectLink {
+      display: flex;
+      width: toRem(129);
+      height: toRem(38);
+      border-radius: toRem(8);
+      background-color: $start;
+      justify-content: center;
+      align-items: center;
+      margin-left: toRem(31);
+      margin-top: toRem(21.82);
+      color: $secondary4;
+      font-weight: 400;
+      transition: 0.5s ease;
+      &:hover {
+        background-color: transparent;
+        border: toRem(1) solid $secondary4;
+        transition: 0.5s ease;
+      }
+    }
+  }
+}

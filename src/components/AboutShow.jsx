@@ -158,16 +158,6 @@ const AboutShow = ({
                 return <></>;
         }
     };
-    useEffect(() => {
-        const handleResize = () => {
-            setBodyWidth(window.innerWidth);
-        };
-        handleResize();
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
     const [bodyWidth, setBodyWidth] = useState(0);
     const [professionalContent, setProfessionalContent] = useState("");
     const [hobbiesContent, setHobbiesContent] = useState("");

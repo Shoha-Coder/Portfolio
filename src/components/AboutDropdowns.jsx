@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Style from "@/styles/AboutDropdowns.module.scss"
 import unActiveDropdownIcon from "@/images/unactveDropdown.png"
-import ActiveDropdownIcon from "@/images/actveDropdown.png"
 import FolderToggleIcon from "@/images/FolderToggleIcon.png"
 import { RiFolder3Fill, RiMailFill, RiPhoneFill } from "react-icons/ri";
 import { RiFolder5Fill } from "react-icons/ri";

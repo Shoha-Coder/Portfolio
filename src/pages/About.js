@@ -4,10 +4,13 @@ import Style from "@/styles/About.module.scss";
 import AboutIconsSide from "@/components/AboutIconsSide";
 import AboutDropdowns from "@/components/AboutDropdowns";
 import AboutShow from "@/components/AboutShow";
+import Helmet from "@/components/Helmet";
 
 const About = () => {
-  const [isProfessionalInfoActive, setIsProfessionalInfoActive] = useState(false);
-  const [isProfessionalInfoFileActive, setIsProfessionalInfoFileActive] = useState(false);
+  const [isProfessionalInfoActive, setIsProfessionalInfoActive] =
+    useState(false);
+  const [isProfessionalInfoFileActive, setIsProfessionalInfoFileActive] =
+    useState(false);
   const [isPersonalInfoActive, setIsPersonalInfoActive] = useState(false);
   const [isHobbiesActive, setIsHobbiesActive] = useState(false);
   const [isHobbiesFileActive, setIsHobbiesFileActive] = useState(false);
@@ -20,6 +23,7 @@ const About = () => {
   const [isEducationFileActive, setIsEducationFileActive] = useState(false);
   return (
     <Container>
+      <Helmet title="About" />
       <div className={Style.About}>
         <p>_about-me</p>
         <AboutIconsSide
