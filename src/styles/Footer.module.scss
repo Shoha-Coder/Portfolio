@@ -89,3 +89,17 @@
     }
   }
 }
+@include BreakpointDown(364){
+  .footer{
+    ._left_side{
+      h2{
+        font-size: $s;
+      }
+    }
+    .GitHub{
+      border-left: none;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
