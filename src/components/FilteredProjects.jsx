@@ -10,7 +10,7 @@ import NextjsIcon from "@/images/nextjs.jpg"
 const ReactContent = () => {
     const [projects, setProjects] = useState([])
     useEffect(() => {
-        axios.get("http://localhost:9000/projects")
+        axios.get("https://portfolio-back-xoee.onrender.com/projects")
             .then(response =>
                 setProjects(response.data))
     }, [])
@@ -40,7 +40,7 @@ const ReactContent = () => {
 const NextjsContent = () => {
     const [projects, setProjects] = useState([])
     useEffect(() => {
-        axios.get("http://localhost:9000/projects")
+        axios.get("https://portfolio-back-xoee.onrender.com/projects")
             .then(response =>
                 setProjects(response.data))
     }, [])
@@ -70,7 +70,7 @@ const NextjsContent = () => {
 const ReactNativeContent = () => {
     const [projects, setProjects] = useState([])
     useEffect(() => {
-        axios.get("http://localhost:9000/projects")
+        axios.get("https://portfolio-back-xoee.onrender.com/projects")
             .then(response =>
                 setProjects(response.data))
     }, [])
@@ -100,7 +100,7 @@ const ReactNativeContent = () => {
 const AllContent = () => {
     const [projects, setProjects] = useState([])
     useEffect(() => {
-        axios.get("http://localhost:9000/projects")
+        axios.get("https://portfolio-back-xoee.onrender.com/projects")
             .then(response =>
                 setProjects(response.data))
     }, [])

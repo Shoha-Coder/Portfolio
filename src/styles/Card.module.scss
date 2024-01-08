@@ -61,3 +61,11 @@
     }
   }
 }
+@include BreakpointDown(425) {
+  .CardContainer{
+    width: toRem(320);
+    .Card{
+      width: toRem(320);
+    }
+  }
+}
