@@ -72,8 +72,8 @@ const Nav = ({ isBurgerActive, setIsBurgerActive }) => {
           </div>
         </div>
       </div>
-      <Link className={`${Style.Contact} ${IsContactActive ? Style.Active : ""}`} href={"/contact"}>_contact-me</Link>
-      <Burger click={burgerClick} children={burger} />
+      <Link className={`${Style.Contact} ${IsContactActive ? Style.Active : ""}`} href={"/Contact"}>_contact-me</Link>
+      <Burger click={burgerClick} children={burger} className={Style.Burger} />
     </nav>
   )
 }

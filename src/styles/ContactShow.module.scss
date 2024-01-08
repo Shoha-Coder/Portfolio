@@ -1,0 +1,171 @@
+@import "./vars.scss";
+.ContactShow {
+  width: 100%;
+  height: 100%;
+  .Tabs {
+    width: 100%;
+    height: toRem(40.6);
+    border-bottom: toRem(2) solid $line;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .Tab {
+      width: toRem(140.48);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      border-right: toRem(2) solid $line;
+      justify-content: flex-start;
+      padding-left: toRem(14.25);
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      gap: toRem(12);
+      &.Active {
+        transition: 0.5s ease;
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        &Tab {
+          color: $secondary4;
+        }
+      }
+    }
+  }
+  .tabInfo {
+    &UnActive {
+      transition: 0.5s ease;
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+    }
+    transition: 0.5s ease;
+    position: static;
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.unActive {
+  display: none;
+  &.Active {
+    display: block;
+  }
+}
+@include BreakpointDown(1126) {
+  .ContactShow {
+    height: toRem(4000);
+    .Tabs {
+      display: none;
+      margin-top: 0;
+      .Tab {
+        border-right: none;
+        &.ActiveTab {
+          width: 100%;
+          margin-left: toRem(25);
+        }
+      }
+    }
+  }
+}
+@include BreakpointDown(720) {
+  .ContactShow {
+    .Tabs {
+      .Tab {
+        font-size: $xs;
+      }
+    }
+    .tabInfo {
+      .TabContent {
+        ol {
+          li {
+            padding-left: 0;
+            &::marker {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include BreakpointDown(684) {
+  .ContactShow {
+    .Tabs {
+      .Tab {
+        font-size: $l;
+      }
+    }
+    .tabInfo {
+      .TabContent {
+        ol {
+          li {
+            font-size: toRem(12);
+          }
+        }
+      }
+    }
+  }
+}
+@include BreakpointDown(594) {
+  .ContactShow {
+    .tabInfo {
+      .TabContent {
+        ol {
+          li {
+            font-size: toRem(11);
+          }
+        }
+      }
+    }
+  }
+}
+@include BreakpointDown(556) {
+  .ContactShow {
+    .tabInfo {
+      .TabContent {
+        ol {
+          li {
+            font-size: toRem(10);
+          }
+        }
+      }
+    }
+  }
+}
+@include BreakpointDown(508) {
+  .ContactShow {
+    .Tabs {
+      .Tab {
+        font-size: $s;
+      }
+    }
+    .tabInfo {
+      .TabContent {
+        ol {
+          li {
+            font-size: toRem(9);
+          }
+        }
+      }
+    }
+  }
+}
+@include BreakpointDown(470) {
+  .ContactShow {
+    .Tabs {
+      .Tab {
+        font-size: $s;
+      }
+    }
+    .tabInfo {
+      .TabContent {
+        ol {
+          li {
+            font-size: toRem(8);
+          }
+        }
+      }
+    }
+  }
+}
