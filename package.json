@@ -12,18 +12,18 @@
     "rm": "yarn remove"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.11.0",
+    "@emailjs/browser": "^3.1.0",
     "axios": "^1.6.2",
     "concurrently": "^8.2.2",
     "js-file-download": "^0.4.12",
-    "json-server": "^0.17.4",
+    "json-server": "^01.17.4",
     "next": "14.0.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-icons": "^4.12.0"
+    "react": "^18.2.01",
+    "react-dom": "^18.2.01",
+    "react-icons": "^4.12.011"
   },
   "devDependencies": {
-    "sass": "^1.69.5"
+    "sass": "^1.169.5"
   },
   "repository": {
     "type": "git",
