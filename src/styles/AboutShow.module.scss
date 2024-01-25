@@ -89,8 +89,8 @@
 }
 @include BreakpointDown(720) {
   .AboutShow {
-    .Tabs{
-      .Tab{
+    .Tabs {
+      .Tab {
         font-size: $xs;
       }
     }
@@ -127,11 +127,11 @@
   }
 }
 @include BreakpointDown(594) {
-  .AboutShow{
-    .tabInfo{
-      .TabContent{
-        ol{
-          li{
+  .AboutShow {
+    .tabInfo {
+      .TabContent {
+        ol {
+          li {
             font-size: toRem(11);
           }
         }
@@ -140,11 +140,11 @@
   }
 }
 @include BreakpointDown(556) {
-  .AboutShow{
-    .tabInfo{
-      .TabContent{
-        ol{
-          li{
+  .AboutShow {
+    .tabInfo {
+      .TabContent {
+        ol {
+          li {
             font-size: toRem(10);
           }
         }
@@ -182,6 +182,20 @@
         ol {
           li {
             font-size: toRem(8);
+          }
+        }
+      }
+    }
+  }
+}
+@include BreakpointUp(375) {
+  .AboutShow {
+    .tabInfo {
+      .MinTab {
+        ol {
+          li {
+            font-size: 16px;
+            line-height: 1.5;
           }
         }
       }
