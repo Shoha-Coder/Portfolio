@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import Style from "@/styles/ProjectsFilterSide.module.scss"
-import { FaReact  } from "react-icons/fa";
+import { FaReact } from "react-icons/fa";
 import unActiveDropdownIcon from "@/images/unactveDropdown.png"
 import Image from 'next/image';
-import { SiNextdotjs } from "react-icons/si";
-import { TbBrandReactNative } from "react-icons/tb";
+import { SiNextdotjs, SiVite } from "react-icons/si";
 
 const ProjectsFilterSide = ({
     reactChecked, setReactChecked,
     nextChecked, setNextChecked,
-    reactNativeChecked, setReactNativeChecked
+    viteChecked, setViteChecked
 }) => {
     const [dropdown, setDropdown] = useState(false)
     let DropdownClick
     let ReactClick
-    let ReactNativeClick
+    let ViteClick
     let NextClick
     if (dropdown === true) {
         DropdownClick = () => setDropdown(false)
@@ -31,15 +30,15 @@ const ProjectsFilterSide = ({
     } else {
         NextClick = () => setNextChecked(true)
     }
-    if (reactNativeChecked === true) {
-        ReactNativeClick = () => setReactNativeChecked(false)
+    if (viteChecked === true) {
+        ViteClick = () => setViteChecked(false)
     } else {
-        ReactNativeClick = () => setReactNativeChecked(true)
+        ViteClick = () => setViteChecked(true)
     }
     const [bodyWidth, setBodyWidth] = useState(0);
     const [React, setReact] = useState(false)
     const [Nextjs, setNextjs] = useState(false)
-    const [ReactNative, setReactNative] = useState(false)
+    const [Vite, setVite] = useState(false)
     useEffect(() => {
         const handleResize = () => {
             setBodyWidth(window.innerWidth);
@@ -54,17 +53,17 @@ const ProjectsFilterSide = ({
         if (bodyWidth <= 70.375 * parseFloat(getComputedStyle(document.documentElement).fontSize)) {
             setNextjs(true)
             setReact(true)
-            setReactNative(true)
+            setVite(true)
         } else {
             setNextjs(false)
             setReact(false)
-            setReactNative(false)
+            setVite(false)
         }
     }, [bodyWidth]);
     if (Nextjs === true) {
         NextClick = () => {
             setReactChecked(false)
-            setReactNativeChecked(false)
+            setViteChecked(false)
             if (nextChecked === true) {
                 setNextChecked(false)
             } else {
@@ -83,7 +82,7 @@ const ProjectsFilterSide = ({
     if (React === true) {
         ReactClick = () => {
             setNextChecked(false)
-            setReactNativeChecked(false)
+            setViteChecked(false)
             if (reactChecked === true) {
                 setReactChecked(false)
             } else {
@@ -99,22 +98,22 @@ const ProjectsFilterSide = ({
             }
         }
     }
-    if (ReactNative === true) {
-        ReactNativeClick = () => {
+    if (Vite === true) {
+        ViteClick = () => {
             setNextChecked(false)
             setReactChecked(false)
-            if (reactNativeChecked === true) {
-                setReactNativeChecked(false)
+            if (viteChecked === true) {
+                setViteChecked(false)
             } else {
-                setReactNativeChecked(true)
+                setViteChecked(true)
             }
         }
     } else {
-        ReactNativeClick = () => {
-            if (reactNativeChecked === true) {
-                setReactNativeChecked(false)
+        ViteClick = () => {
+            if (viteChecked === true) {
+                setViteChecked(false)
             } else {
-                setReactNativeChecked(true)
+                setViteChecked(true)
             }
         }
     }
@@ -130,7 +129,7 @@ const ProjectsFilterSide = ({
                 <div className={`${Style.DropdownItem} ${dropdown === true ? Style.Active : ""}`}>
                     <h3 onClick={ReactClick} className={reactChecked ? Style.Active : ""}><input type="checkbox" checked={reactChecked} /> <FaReact className={Style.Icon} /> React</h3>
                     <h3 onClick={NextClick} className={nextChecked ? Style.Active : ""}><input type="checkbox" checked={nextChecked} /> <SiNextdotjs className={Style.Icon} /> Next js</h3>
-                    <h3 onClick={ReactNativeClick} className={reactNativeChecked ? Style.Active : ""}><input type="checkbox" checked={reactNativeChecked} /> <TbBrandReactNative className={Style.Icon} /> React Native</h3>
+                    <h3 onClick={ViteClick} className={viteChecked ? Style.Active : ""}><input type="checkbox" checked={viteChecked} /> <SiVite className={Style.Icon} /> Vite</h3>
                 </div>
             </div>
         </div>

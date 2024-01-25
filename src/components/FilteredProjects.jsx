@@ -4,8 +4,8 @@ import axios from 'axios'
 import { RiCloseFill } from 'react-icons/ri'
 import ReactIcon from "@/images/React.png"
 import Card from './Card'
-import ReactNativeIcon from "@/images/reactnative.jpg"
-import NextjsIcon from "@/images/nextjs.jpg"
+import ViteIcon from "@/images/Vite.svg"
+import NextjsIcon from "@/images/nextjs.png"
 
 const ReactContent = () => {
     const [projects, setProjects] = useState([])
@@ -67,7 +67,7 @@ const NextjsContent = () => {
         </div>
     )
 }
-const ReactNativeContent = () => {
+const ViteContent = () => {
     const [projects, setProjects] = useState([])
     useEffect(() => {
         axios.get("https://back.shoha-coder.uz/projects")
@@ -77,7 +77,7 @@ const ReactNativeContent = () => {
     return (
         <div className={Style.Content}>
             {
-                projects.filter(project => project.category === "ReactNative").map(project => {
+                projects.filter(project => project.category === "Vite").map(project => {
                     return (
                         <div key={project.id}>
                             <Card
@@ -116,8 +116,8 @@ const AllContent = () => {
                         CategoryImage = ReactIcon
                     } else if (project.category === "Nextjs") {
                         CategoryImage = NextjsIcon
-                    } else if (project.category === "ReactNative") {
-                        CategoryImage = ReactNativeIcon
+                    } else if (project.category === "Vite") {
+                        CategoryImage = ViteIcon
                     }
                     return (
                         <div key={project.id}>
@@ -144,25 +144,25 @@ const AllContent = () => {
 const FilteredProjects = ({
     reactChecked,
     nextChecked,
-    reactNativeChecked,
+    viteChecked,
     setReactChecked,
     setNextChecked,
-    setReactNativeChecked
+    setViteChecked
 }) => {
     const handleReactClose = () => setReactChecked(false);
     const handleNextClose = () => setNextChecked(false);
-    const handleReactNativeClose = () => setReactNativeChecked(false);
+    const handleViteClose = () => setViteChecked(false);
     const [activeTab, setActiveTab] = useState(null);
 
     useEffect(() => {
         if (reactChecked) setActiveTab('react');
         else if (nextChecked) setActiveTab('next');
-        else if (reactNativeChecked) setActiveTab('reactnative');
+        else if (viteChecked) setActiveTab('vite');
         else setActiveTab('all')
     }, [
         reactChecked,
         nextChecked,
-        reactNativeChecked,
+        viteChecked,
     ]);
     const handleTabClick = (tab) => {
         if (tab !== activeTab) {
@@ -176,8 +176,8 @@ const FilteredProjects = ({
                 return <ReactContent />;
             case 'next':
                 return <NextjsContent />;
-            case 'reactnative':
-                return <ReactNativeContent />;
+            case 'vite':
+                return <ViteContent />;
             case 'all':
                 return <AllContent />;
             default:
@@ -187,7 +187,7 @@ const FilteredProjects = ({
     const [bodyWidth, setBodyWidth] = useState(0);
     const [reactContent, setReactContent] = useState("");
     const [nextjsContent, setNextjsContent] = useState("");
-    const [reactNativeContent, setReactNativeContent] = useState("");
+    const [viteContent, setViteContent] = useState("");
     const [allContent, setAllContent] = useState("");
     useEffect(() => {
         const handleResize = () => {
@@ -203,12 +203,12 @@ const FilteredProjects = ({
         if (bodyWidth <= 70.375 * parseFloat(getComputedStyle(document.documentElement).fontSize)) {
             setReactContent(`// projects / React`);
             setNextjsContent(`// projects / Next js`);
-            setReactNativeContent("// projects / React Native");
+            setViteContent("// projects / Vite");
             setAllContent(`// projects / All`);
         } else {
             setReactContent("React");
             setNextjsContent("Next js");
-            setReactNativeContent("React Native");
+            setViteContent("Vite");
             setAllContent("All");
         }
     }, [bodyWidth]);
@@ -234,10 +234,10 @@ const FilteredProjects = ({
                     {nextjsContent}<RiCloseFill className={Style.CloseIcon} fontSize={18} onClick={handleNextClose} />
                 </div>
                 <div
-                    onClick={() => handleTabClick('reactnative')}
-                    className={`${Style.Tab} ${Style.ReactNative} ${reactNativeChecked ? Style.Active : ''} ${activeTab === 'reactnative' ? Style.ActiveTab : ''}`}
+                    onClick={() => handleTabClick('vite')}
+                    className={`${Style.Tab} ${Style.Vite} ${viteChecked ? Style.Active : ''} ${activeTab === 'vite' ? Style.ActiveTab : ''}`}
                 >
-                    {reactNativeContent}<RiCloseFill className={Style.CloseIcon} fontSize={18} onClick={handleReactNativeClose} />
+                    {viteContent}<RiCloseFill className={Style.CloseIcon} fontSize={18} onClick={handleViteClose} />
                 </div>
             </div>
             <div className={Style.Cards}>

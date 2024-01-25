@@ -42,12 +42,12 @@
       }
       &.React {
         width: toRem(110);
-        &Native {
-          width: toRem(180);
-        }
       }
       &.Next {
         width: toRem(120);
+      }
+      &.Vite{
+        width: toRem(100);
       }
     }
   }
