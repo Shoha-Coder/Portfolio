@@ -3,11 +3,11 @@
 .CardContainer {
   width: toRem(370.35);
   margin: auto;
-  &.Mini{
-      width: toRem(291);
-      height: toRem(328);
-      margin: auto;
-    }
+  &.Mini {
+    width: toRem(291);
+    height: toRem(328);
+    margin: auto;
+  }
   .Card {
     width: toRem(370.35);
     height: toRem(314.82);
@@ -15,10 +15,16 @@
     background-color: $primary3;
     border-radius: toRem(15);
     border: toRem(1) solid $line;
-    &.Mini{
+    position: relative;
+    &.Mini {
       width: toRem(291);
       height: toRem(328);
       margin: auto;
+      .CategoryImage {
+        position: absolute;
+        right: toRem(15);
+        top: toRem(15);
+      }
     }
     .ProjectImage {
       width: 100%;
@@ -32,13 +38,14 @@
     .CategoryImage {
       width: toRem(28);
       height: toRem(28);
-      position: relative;
-      top: toRem(-129);
-      right: toRem(-325.65);
+      position: absolute;
+      right: toRem(20);
+      top: toRem(15);
     }
     .Description {
       margin-left: toRem(31);
       margin-right: toRem(34.66);
+      margin-top: toRem(15);
     }
     .ProjectLink {
       display: flex;
@@ -62,9 +69,9 @@
   }
 }
 @include BreakpointDown(425) {
-  .CardContainer{
+  .CardContainer {
     width: toRem(320);
-    .Card{
+    .Card {
       width: toRem(320);
     }
   }

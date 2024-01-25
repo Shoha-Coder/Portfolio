@@ -41,7 +41,7 @@ const Card = ({
                 <Image src={ProjectImage} className={Style.ProjectImage} width={10} height={1} alt={AltText} />
                 <Image src={CategoryImage} className={`${Style.CategoryImage} ${CategoryImageClass}`} />
                 <p className={Style.Description}>{description}</p>
-                <Link href={ProjectLink} className={Style.ProjectLink}>view-project</Link>
+                <Link href={ProjectLink} className={Style.ProjectLink} target='_blank'>view-project</Link>
             </div>
         </div>
     )
