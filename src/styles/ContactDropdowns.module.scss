@@ -1,0 +1,102 @@
+@import "./vars.scss";
+.ContactDropdowns {
+  width: toRem(300);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: toRem(2) solid $line;
+  .Title {
+    width: 100%;
+    height: toRem(40.6);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: toRem(15.75);
+    gap: toRem(12.33);
+    border-bottom: toRem(2) solid $line;
+    cursor: pointer;
+    transition: 0.5s ease;
+    &.Active,
+    &:hover {
+      transition: 0.5s ease;
+      color: $secondary4;
+    }
+    &.Active {
+      .DropdownIcon {
+        transform: rotate(90deg);
+        filter: brightness(1000%);
+      }
+    }
+    &:hover {
+      .DropdownIcon {
+        transition: 0.5s ease;
+        filter: brightness(1000%);
+      }
+    }
+    .DropdownIcon {
+      transition: 0.1s ease;
+    }
+  }
+  .Dropdown {
+    position: relative;
+    &.UnActive {
+      display: none;
+    }
+    .Bt {
+      border-top: toRem(2) solid $line;
+    }
+    .Contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-left: toRem(14);
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      display: flex;
+      flex-direction: column;
+      gap: toRem(5);
+      padding-top: toRem(5);
+      &.FindMe {
+        a {
+          gap: toRem(10);
+        }
+      }
+      &.Active {
+        transition: 0.5s ease;
+        position: static;
+        opacity: 1;
+        visibility: visible;
+      }
+      .Icon {
+        display: flex;
+        align-items: center;
+        height: toRem(25.6);
+        transition: 0.5s ease;
+        &:hover {
+          color: $secondary4;
+          transition: 0.5s ease;
+        }
+      }
+    }
+  }
+}
+@include BreakpointDown(1126) {
+  .ContactDropdowns {
+    width: 100%;
+    border: none;
+    .Dropdown {
+      margin-top: toRem(2);
+      margin-bottom: toRem(2);
+      .Title {
+        border: none;
+        background-color: $line;
+      }
+      &.UnActive {
+        display: block;
+      }
+    }
+  }
+}

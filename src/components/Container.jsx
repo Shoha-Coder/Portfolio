@@ -4,13 +4,15 @@ import Footer from './Footer';
 import Style from "@/styles/Container.module.scss";
 import BurgerMenu from './BurgerMenu';
 import BurgerMenuStyle from "@/styles/BurgerMenu.module.scss"
+import { useRouter } from 'next/router';
 
 const Container = ({ children }) => {
   const [isBurgerActive, setIsBurgerActive] = useState(false);
+  const router = useRouter()
   return (
     <div className={Style.Container}>
       <Nav isBurgerActive={isBurgerActive} setIsBurgerActive={setIsBurgerActive} />
-      <div className={`${Style.Children}`}>
+      <div className={`${Style.Children} ${router.pathname === "/About" ? Style.About : router.pathname === "/Projects" ? Style.Projects : ""}`}>
         <BurgerMenu className={isBurgerActive === true ? BurgerMenuStyle.BurgerMenuActive : ""} />
         {!isBurgerActive && children}
       </div>

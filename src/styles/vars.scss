@@ -35,7 +35,6 @@ $start: #1c2b3a;
   @return $remValue;
 }
 
-
 // Breakpoints
 @mixin BreakpointDown($value) {
   @media (max-width: toRem($value)) {

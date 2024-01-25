@@ -1,0 +1,216 @@
+@import "./vars.scss";
+.CardsContainer {
+  width: 100%;
+  height: 100%;
+  padding-bottom: toRem(115.18);
+  min-height: toRem(600);
+  .Tabs {
+    width: 100%;
+    height: toRem(40.6);
+    border-bottom: toRem(2) solid $line;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .Tab {
+      width: toRem(200.48);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      border-right: toRem(2) solid $line;
+      justify-content: flex-start;
+      padding-left: toRem(14.25);
+      opacity: 0;
+      visibility: hidden;
+      position: absolute;
+      top: 0;
+      gap: toRem(12);
+      &.Active {
+        transition: 0.5s ease;
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        &Tab {
+          color: $secondary4;
+        transition: 0.5s ease;
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        }
+      }
+      &.All {
+        width: toRem(60);
+      }
+      &.React {
+        width: toRem(110);
+        &Native {
+          width: toRem(180);
+        }
+      }
+      &.Next {
+        width: toRem(120);
+      }
+    }
+  }
+  .Cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .Content {
+      width: 100%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding-top: toRem(115.18);
+      .ProjectNameClass {
+        display: flex;
+        gap: toRem(10);
+        margin: auto;
+        margin-bottom: toRem(14.79);
+        span {
+          color: #5565e8;
+        }}
+    }
+  }
+}
+
+@include BreakpointDown(1555) {
+  .CardsContainer {
+    .Cards {
+      .Content {
+        grid-template-columns: repeat(2, 1fr);
+        gap: toRem(50) 0;
+      }
+    }
+  }
+}
+@include BreakpointDown(1126) {
+  .CardsContainer {
+    .Tabs {
+      border-bottom: none;
+      .Tab {
+        border-right: none;
+        .CloseIcon{
+            display: none;
+        }
+        &.ActiveTab {
+          width: 100%;
+          margin-left: toRem(25);
+        }
+      }
+    }
+    .Content{
+        padding-top: toRem(10);
+    }
+  }
+}
+@include BreakpointDown(888) {
+  .CardsContainer {
+    .Cards {
+      .Content {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}
+
+@include BreakpointDown(720) {
+  .CardsContainer {
+    .Tabs {
+      .Tab {
+        font-size: $xs;
+      }
+    }
+    .tabInfo {
+      .TabContent {
+        ol {
+          li {
+            padding-left: 0;
+            &::marker {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include BreakpointDown(684) {
+  .CardsContainer {
+    .Tabs {
+      .Tab {
+        font-size: $l;
+      }
+    }
+    .tabInfo {
+      .TabContent {
+        ol {
+          li {
+            font-size: toRem(12);
+          }
+        }
+      }
+    }
+  }
+}
+@include BreakpointDown(594) {
+  .CardsContainer {
+    .tabInfo {
+      .TabContent {
+        ol {
+          li {
+            font-size: toRem(11);
+          }
+        }
+      }
+    }
+  }
+}
+@include BreakpointDown(556) {
+  .CardsContainer {
+    .tabInfo {
+      .TabContent {
+        ol {
+          li {
+            font-size: toRem(10);
+          }
+        }
+      }
+    }
+  }
+}
+@include BreakpointDown(508) {
+  .CardsContainer {
+    .Tabs {
+      .Tab {
+        font-size: $s;
+      }
+    }
+    .tabInfo {
+      .TabContent {
+        ol {
+          li {
+            font-size: toRem(9);
+          }
+        }
+      }
+    }
+  }
+}
+@include BreakpointDown(470) {
+  .CardsContainer {
+    .Tabs {
+      .Tab {
+        font-size: $s;
+      }
+    }
+    .tabInfo {
+      .TabContent {
+        ol {
+          li {
+            font-size: toRem(8);
+          }
+        }
+      }
+    }
+  }
+}

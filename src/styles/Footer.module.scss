@@ -56,7 +56,7 @@
     align-items: center;
     padding-right: toRem(22);
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     border-left: toRem(2) solid $line;
     &:hover {
       .GitHubIcon {
@@ -86,6 +86,20 @@
       .GitHubIcon{
         margin-left: 0;
       }
+    }
+  }
+}
+@include BreakpointDown(364){
+  .footer{
+    ._left_side{
+      h2{
+        font-size: $s;
+      }
+    }
+    .GitHub{
+      border-left: none;
+      justify-content: center;
+      align-items: center;
     }
   }
 }

@@ -1,9 +1,9 @@
-import Head from "next/head";
-import Helmet from "@/components/Helmet";
-import Style from "@/styles/Home.module.scss";
-import HomeContent from "@/components/HomeContent";
-import Game from "@/components/Snake/Game";
-import Container from "@/components/Container";
+  import Head from "next/head";
+  import Helmet from "@/components/Helmet";
+  import Style from "@/styles/Home.module.scss";
+  import HomeContent from "@/components/HomeContent";
+  import Game from "@/components/Snake/Game";
+  import Container from "@/components/Container"
 
 export default function Home() {
   return (

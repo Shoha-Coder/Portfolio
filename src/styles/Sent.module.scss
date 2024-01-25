@@ -1,0 +1,31 @@
+@import "./vars.scss";
+.Sent {
+  width: toRem(450);
+  height: toRem(200);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  h1 {
+    margin-bottom: toRem(10);
+    color: $secondary4;
+    margin-top: toRem(276.27);
+  }
+  p {
+    margin-bottom: toRem(37);
+  }
+  button {
+    width: toRem(163);
+    padding: toRem(10);
+    color: $secondary4;
+    background-color: $start;
+    border-radius: toRem(8);
+  }
+}
+@include BreakpointDown(466) {
+    .Sent{
+        width: toRem(320);
+    }
+}

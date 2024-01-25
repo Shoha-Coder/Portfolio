@@ -1,23 +1,44 @@
 @import "./vars.scss";
-.Container{
-    max-width: toRem(1782);
-    height: auto;
-    margin-top: 0;
-    border-radius: toRem(8);
-    background-color: $primary2;
-    border: toRem(2) solid $line;
-    margin: toRem(69) auto;
-    .Children{
-        height: toRem(821.81);
-    }
+.Container {
+  max-width: toRem(1782);
+  height: auto;
+  margin-top: 0;
+  border-radius: toRem(8);
+  background-color: $primary2;
+  border: toRem(2) solid $line;
+  margin: toRem(69) auto;
+  .Children {
+    height: toRem(821.81);
+  }
 }
-@include BreakpointDown(1888){
-    .Container{
-        margin: toRem(69);
+@include BreakpointDown(1888) {
+  .Container {
+    margin: toRem(69);
+  }
+}
+@include BreakpointDown(1555) {
+  .Container {
+    .Children {
+      &.Projects {
+        min-height: toRem(600);
+        height: auto;
+      }
     }
+  }
+}
+@include BreakpointDown(1126) {
+  .Container {
+    .Children {
+      &.About {
+        padding-bottom: toRem(25);
+        height: auto;
+        min-height: toRem(841);
+      }
+    }
+  }
 }
 @include BreakpointDown(946) {
-    .Container{
-        margin: toRem(15);
-    }
+  .Container {
+    margin: toRem(15);
+  }
 }

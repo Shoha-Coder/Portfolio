@@ -1,0 +1,59 @@
+@import "./vars.scss";
+.Send {
+  width: toRem(372);
+  margin: auto;
+  margin-top: toRem(115.27);
+  h3 {
+    margin-bottom: toRem(10);
+  }
+  input,
+  textarea {
+    margin-bottom: toRem(24);
+    width: toRem(372);
+    resize: none;
+    background-color: $primary3;
+    border-radius: toRem(8);
+    border: toRem(2) solid $line;
+    padding-left: toRem(5);
+    padding-right: toRem(5);
+    &:focus {
+      filter: drop-shadow(toRem(0) toRem(0) toRem(0.5) $secondary1);
+    }
+  }
+  input {
+    height: toRem(41);
+  }
+  textarea {
+    height: toRem(145);
+    padding-top: toRem(5);
+  }
+  button {
+    width: toRem(146);
+    height: toRem(38);
+    color: $secondary4;
+    background-color: $start;
+    border-radius: toRem(8);
+    transition: 0.5s ease;
+  }
+}
+@include BreakpointDown(1126) {
+  .Send {
+    margin-top: 0;
+  }
+}
+@include BreakpointDown(425) {
+  .Send {
+    width: toRem(320);
+    input,textarea{
+      width: toRem(320);
+    }
+  }
+}
+@include BreakpointDown(374) {
+  .Send {
+    width: toRem(250);
+    input,textarea{
+      width: toRem(250);
+    }
+  }
+}

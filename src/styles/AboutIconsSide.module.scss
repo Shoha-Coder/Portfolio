@@ -1,0 +1,29 @@
+@import "./vars.scss";
+.AboutIconsSide {
+  width: toRem(68);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: toRem(33);
+  justify-content: flex-start;
+  padding-top: toRem(17.46);
+  border-right: toRem(2) solid $line;
+  .Icon {
+    width: toRem(24);
+    &:hover {
+      filter: brightness(1000%);
+    }
+    &.PersonalInfo   {
+      opacity: 55%;
+    }
+    &.Active{
+        filter: brightness(1000%);
+    }
+  }
+}
+@include BreakpointDown(1126) {
+  .AboutIconsSide{
+    display: none;
+  }
+}
