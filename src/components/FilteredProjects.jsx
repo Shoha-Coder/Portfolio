@@ -82,7 +82,7 @@ const ViteContent = () => {
                         <div key={project.id}>
                             <Card
                                 ProjectImage={"/images" + project.ProjectImage}
-                                CategoryImage={ReactIcon}
+                                CategoryImage={ViteIcon}
                                 description={`${project.description.substring(0, 50)}...`}
                                 AltText={project.AltText}
                                 ProjectLink={project.link}
