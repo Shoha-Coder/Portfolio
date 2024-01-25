@@ -91,6 +91,138 @@ const EducationTabContent = () => (
         </ol>
     </div>
 );
+const ProfessionalInfoTabContentMin = () => {
+    return (
+        <div className={`${Style.TabContent} ${Style.MinTab}`}>
+            <ol>
+                <li>/**</li>
+                <li>* You can download my</li>
+                <li>* professional information <a href={"/Shoha-Coder CV.pdf"} download>here</a></li>
+                <li>*/</li>
+            </ol>
+        </div>
+    );
+}
+
+const HobbiesTabContentMin = () => (
+    <div className={`${Style.TabContent} ${Style.MinTab}`}>
+        <ol>
+            <li>/**</li>
+            <li>* Hey! I'm a digital enthusiast</li>
+            <li>* who loves crafting websites</li>
+            <li>* using React and Next.js,</li>
+            <li>* exploring the dynamic power </li>
+            <li>* of JavaScript. When not</li>
+            <li>* coding, I'm conquering</li>
+            <li>* virtual battlefields in</li>
+            <li>* Counter-Strike 2, mastering</li>
+            <li>* strategy and reflexes. Beyond</li>
+            <li>* screens, my curiosity extends</li>
+            <li>* to exploring galaxies, adding</li>
+            <li>* a cosmic touch to my</li>
+            <li>* tech-filled journey.</li>
+            <li>*/</li>
+        </ol>
+    </div>
+);
+
+const BioTabContentMin = () => (
+    <div className={`${Style.TabContent} ${Style.MinTab}`}>
+        <ol>
+            <li>/**</li>
+            <li>*  I am Shoha_coder, a dedicated</li>
+            <li>*  Front-end developer who</li>
+            <li>*  recently completed</li>
+            <li>*  an intensive 6-month</li>
+            <li>*  Front-end development program</li>
+            <li>*  at IT-Academy from April 2023</li>
+            <li>*  to September 2023.</li>
+            <li>*  My educationals journey has</li>
+            <li>*  been focused on mastering</li>
+            <li>*  technologie such as Next.js,</li>
+            <li>*  React, HTML, CSS, SCSS,</li>
+            <li>*  JavaScript, Git, and</li>
+            <li>*  gaining a foundational</li>
+            <li>*  understanding of Express.js.</li>
+            <li>*  I take pride in achieving</li>
+            <li>*  the A+ Front-end award at</li>
+            <li>*  IT-Academy, showcasing my</li>
+            <li>*  commitment to excellence in</li>
+            <li>*  the field despite not having</li>
+            <li>*  professional work experience</li>
+            <li>*  yet. You can explore my</li>
+            <li>*  coding endeavors and projects</li>
+            <li>*  on <Link href={"https://github.com/shoha-coder"} target='_blank'>Github</Link>. As I embark on the</li>
+            <li>*  exciting journey of applying</li>
+            <li>*  my skills in real-world</li>
+            <li>*  scenarios, I remain</li>
+            <li>*  passionate about creating</li>
+            <li>*  intuitive and seamless user</li>
+            <li>*  experiences through</li>
+            <li>*  innovative Front-end</li>
+            <li>*  development. I am eager to</li>
+            <li>*  contribute my skills and</li>
+            <li>*  learnings to future projects,</li>
+            <li>*  embracing opportunities to</li>
+            <li>*  grow and excel in the dynamic</li>
+            <li>*  realm of Front-end</li>
+            <li>*  development.</li>
+            <li>*/</li>
+        </ol>
+    </div>
+);
+
+const InterestsTabContentMin = () => (
+    <div className={`${Style.TabContent} ${Style.MinTab}`}>
+        <ol>
+            <li>/**</li>
+            <li>*  I'm passionate about</li>
+            <li>*  web development, turning</li>
+            <li>*  intricate code into visually</li>
+            <li>*  captivating websites. I admire</li>
+            <li>*  BMW for its blend of engineering</li>
+            <li>*  and style, finding inspiration</li>
+            <li>*  in sleek designs and cutting-edge </li>
+            <li>*  technology. In my leisure time,</li>
+            <li>*  I dive into the strategic world</li>
+            <li>*  of Counter-Strike 2 for the</li>
+            <li>*  adrenaline rush of competitive</li>
+            <li>*  gaming. My interests weave</li>
+            <li>*  together web development,</li>
+            <li>*  automotive elegance, and</li>
+            <li>*  competitive gaming, creating</li>
+            <li>*  a rich and diverse landscape</li>
+            <li>*  that keeps me inspired in both</li>
+            <li>*  virtual and real-world spheres.</li>
+            <li>*/</li>
+        </ol>
+    </div>
+);
+
+const EducationTabContentMin = () => (
+    <div className={`${Style.TabContent} ${Style.MinTab}`}>
+        <ol>
+            <li>/**</li>
+            <li>*  I successfully completed the</li>
+            <li>*  Front-End Development program at </li>
+            <li>*  IT Academy from April 2023 to</li>
+            <li>*  September 2023, achieving an A+</li>
+            <li>*  grade. My expertise extends to</li>
+            <li>*  building projects using</li>
+            <li>*  cutting-edge technologies such as</li>
+            <li>*  React JS, Next.js. With a</li>
+            <li>*  portfolio of over nine projects,</li>
+            <li>*  I have demonstrated my</li>
+            <li>*  proficiency in creating robust</li>
+            <li>*  and scalable applications.</li>
+            <li>*  I am enthusiastic about applying</li>
+            <li>*  my skills to contribute to</li>
+            <li>*  innovative and challenging</li>
+            <li>*  projects</li>
+            <li>*/</li>
+        </ol>
+    </div>
+);
 const AboutShow = ({
     isProfessionalInfoActive,
     setIsProfessionalInfoActive,
@@ -158,12 +290,32 @@ const AboutShow = ({
                 return <></>;
         }
     };
+    const renderTabContentMin = () => {
+        switch (activeTab) {
+            case 'professional':
+                return <ProfessionalInfoTabContentMin />;
+            case 'hobbies':
+                return <HobbiesTabContentMin />;
+            case 'bio':
+                return <BioTabContentMin />;
+            case 'interests':
+                return <InterestsTabContentMin />;
+            case 'education':
+                return <EducationTabContentMin />;
+            case 'null':
+                return <></>;
+            default:
+                return <></>;
+        }
+    };
     const [bodyWidth, setBodyWidth] = useState(0);
     const [professionalContent, setProfessionalContent] = useState("");
     const [hobbiesContent, setHobbiesContent] = useState("");
     const [bioContent, setBioContent] = useState("");
     const [interestsContent, setInterestsContent] = useState("");
     const [eduContent, setEduContent] = useState("");
+    const [renderMaxContent, setRenderMaxContent] = useState(false)
+    const [renderMinContent, setRenderMinContent] = useState(false)
     useEffect(() => {
         const handleResize = () => {
             setBodyWidth(window.innerWidth);
@@ -188,13 +340,20 @@ const AboutShow = ({
             setInterestsContent("interests");
             setEduContent("education");
         }
+        if (bodyWidth >= 26.563 * parseFloat(getComputedStyle(document.documentElement).fontSize)) {
+            setRenderMaxContent(true)
+            setRenderMinContent(false)
+        } else {
+            setRenderMaxContent(false)
+            setRenderMinContent(true)
+        }
     }, [bodyWidth]);
     return (
         <div className={Style.AboutShow}>
             <div className={Style.Tabs}>
                 <div
                     className={`${Style.Tab} ${Style.ProfessionalTab} ${isProfessionalInfoFileActive ? Style.Active : ''} ${activeTab === 'professional' ? Style.ActiveTab : ""}`}
-                    onClick={()=>handleTabClick('professional')}
+                    onClick={() => handleTabClick('professional')}
                 >
                     {professionalContent}<RiCloseFill className={Style.CloseIcon} fontSize={18} onClick={handleProfessionalInfoClose} />
                 </div>
@@ -224,7 +383,7 @@ const AboutShow = ({
                 </div>
             </div>
             <div className={`${Style.tabInfo}`}>
-                {renderTabContent()}
+                {renderMaxContent ? renderTabContent() : renderTabContentMin()}
             </div>
         </div>
     );
