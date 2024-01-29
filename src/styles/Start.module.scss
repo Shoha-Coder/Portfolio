@@ -1,19 +1,19 @@
 @import "./vars.scss";
-.Start{
-    padding: toRem(10) toRem(14) toRem(10) toRem(14);
-    gap: toRem(10);
-    background-color: $accent1;
-    color: $primary1;
-    border-radius: toRem(8);
-    font-size: $s;
-    &:hover{
-        background-color: $start;
-        color: $secondary4;
-    }
-    &:active{
-        background-color: transparent;
-        border: toRem(1) solid $secondary4;
-        color: $secondary4;
-        font-size: toRem(11);
-    }
+.Start {
+  padding: toRem(10) toRem(14) toRem(10) toRem(14);
+  gap: toRem(10);
+  background-color: $accent1;
+  color: $primary1;
+  border-radius: toRem(8);
+  font-size: $s;
+  &:hover {
+    background-color: $start;
+    color: $secondary4;
+  }
+  &:active {
+    background-color: transparent;
+    border: toRem(1) solid $secondary4;
+    color: $secondary4;
+    font-size: toRem(11);
+  }
 }

@@ -11,19 +11,20 @@
   border-right: toRem(2) solid $line;
   .Icon {
     width: toRem(24);
+    cursor: pointer;
     &:hover {
       filter: brightness(1000%);
     }
-    &.PersonalInfo   {
+    &.PersonalInfo {
       opacity: 55%;
     }
-    &.Active{
-        filter: brightness(1000%);
+    &.Active {
+      filter: brightness(1000%);
     }
   }
 }
 @include BreakpointDown(1126) {
-  .AboutIconsSide{
+  .AboutIconsSide {
     display: none;
   }
 }

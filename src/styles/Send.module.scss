@@ -44,7 +44,8 @@
 @include BreakpointDown(425) {
   .Send {
     width: toRem(320);
-    input,textarea{
+    input,
+    textarea {
       width: toRem(320);
     }
   }
@@ -52,7 +53,8 @@
 @include BreakpointDown(374) {
   .Send {
     width: toRem(250);
-    input,textarea{
+    input,
+    textarea {
       width: toRem(250);
     }
   }

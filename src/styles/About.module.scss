@@ -1,21 +1,21 @@
 @import "./vars.scss";
-.About{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    p{
-        display: none;
-    }
+.About {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  p {
+    display: none;
+  }
 }
 @include BreakpointDown(1126) {
-    .About {
-        flex-direction: column;
-        p {
-            display: block;
-            color: $secondary4;
-            margin-top: toRem(21);
-            margin-bottom: toRem(29);
-            margin-left: toRem(27);
-        }
+  .About {
+    flex-direction: column;
+    p {
+      display: block;
+      color: $secondary4;
+      margin-top: toRem(21);
+      margin-bottom: toRem(29);
+      margin-left: toRem(27);
     }
+  }
 }

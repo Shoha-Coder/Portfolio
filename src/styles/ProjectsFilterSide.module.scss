@@ -55,6 +55,7 @@
         padding-bottom: toRem(18.97);
         color: $secondary1;
         font-weight: 400;
+        cursor: pointer;
         &.Active {
           color: $secondary4;
           .Icon {
@@ -72,11 +73,11 @@
           color: $secondary4;
           appearance: none;
           border: toRem(1) solid $secondary1;
-          transition: .5s ease;
+          transition: 0.5s ease;
         }
-        :checked{
-            transition: .5s ease;
-            appearance: auto;
+        :checked {
+          transition: 0.5s ease;
+          appearance: auto;
         }
         .Icon {
           margin-right: toRem(10);

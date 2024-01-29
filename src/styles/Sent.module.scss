@@ -25,7 +25,7 @@
   }
 }
 @include BreakpointDown(466) {
-    .Sent{
-        width: toRem(320);
-    }
+  .Sent {
+    width: toRem(320);
+  }
 }

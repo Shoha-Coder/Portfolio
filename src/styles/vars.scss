@@ -30,7 +30,11 @@ $start: #1c2b3a;
 
 // Functions
 @function toRem($value) {
-  $unitlessValue: if(type-of($value) == 'number', $value, str-slice($value, 1, -2));
+  $unitlessValue: if(
+    type-of($value) == "number",
+    $value,
+    str-slice($value, 1, -2)
+  );
   $remValue: $unitlessValue / 16 * 1rem;
   @return $remValue;
 }

@@ -1,12 +1,12 @@
 @import "./vars.scss";
 .BurgerMenu {
-  transition: .0s linear;
+  transition: 0s linear;
   position: absolute;
   opacity: 0;
   visibility: hidden;
 }
 .BurgerMenuActive {
-  transition: .5s linear;
+  transition: 0.5s linear;
   position: static;
   opacity: 1;
   visibility: visible;

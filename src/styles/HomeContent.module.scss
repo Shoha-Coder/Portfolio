@@ -92,49 +92,49 @@
   }
 }
 @include BreakpointDown(485) {
-    .HomeContent {
-        .Top{
-            h1{
-                font-size: toRem(52);
-            }
-            h2{
-                font-size: $x;
-            }
-        }
+  .HomeContent {
+    .Top {
+      h1 {
+        font-size: toRem(52);
+      }
+      h2 {
+        font-size: $x;
+      }
     }
+  }
 }
 @include BreakpointDown(410) {
-  .HomeContent{
-    .Top{
-      h3{
+  .HomeContent {
+    .Top {
+      h3 {
         font-size: $l;
       }
-      h1{
+      h1 {
         font-size: $xl;
       }
-      h2{
+      h2 {
         font-size: $l;
       }
     }
   }
 }
 @include BreakpointDown(390) {
-  .HomeContent{
-    .Bottom{
-      h3{
+  .HomeContent {
+    .Bottom {
+      h3 {
         font-size: $l;
       }
     }
   }
 }
 @include BreakpointDown(360) {
-  .HomeContent{
-    .Bottom{
+  .HomeContent {
+    .Bottom {
       width: toRem(200);
-      h3{
+      h3 {
         width: toRem(200);
         font-size: $s;
-        a{
+        a {
           width: toRem(200);
         }
       }

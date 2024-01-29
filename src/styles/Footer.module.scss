@@ -76,27 +76,27 @@
 }
 @include BreakpointDown(471) {
   .footer {
-    .GitHub{
+    .GitHub {
       width: toRem(52);
       padding-right: 0;
       margin-right: toRem(22);
-      a{
+      a {
         display: none;
       }
-      .GitHubIcon{
+      .GitHubIcon {
         margin-left: 0;
       }
     }
   }
 }
-@include BreakpointDown(364){
-  .footer{
-    ._left_side{
-      h2{
+@include BreakpointDown(364) {
+  .footer {
+    ._left_side {
+      h2 {
         font-size: $s;
       }
     }
-    .GitHub{
+    .GitHub {
       border-left: none;
       justify-content: center;
       align-items: center;
