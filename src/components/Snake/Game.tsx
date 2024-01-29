@@ -3,13 +3,13 @@ import Snake from "./Snake";
 import Food from "./Food";
 import Menu from "./Menu";
 import Style from "@/styles/Game.module.scss";
-import Up from "@/images/Up Arrow.svg";
-import Down from "@/images/Down Arrow.svg";
-import Left from "@/images/Left Arrow.svg";
-import Right from "@/images/Right Arrow.svg";
+import Up from "@/assets/images/Up Arrow.svg";
+import Down from "@/assets/images/Down Arrow.svg";
+import Left from "@/assets/images/Left Arrow.svg";
+import Right from "@/assets/images/Right Arrow.svg";
 import FoodLeft from "./FoodLeft";
-import GameOverImg from "@/images/GameOver.png";
-import GmeWinImg from "@/images/GameWon.png";
+import GameOverImg from "@/assets/images/GameOver.png";
+import GmeWinImg from "@/assets/images/GameWon.png";
 import Image from "next/image";
 
 const getRandomFood = (): number[] => {

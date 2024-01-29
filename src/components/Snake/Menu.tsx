@@ -1,7 +1,7 @@
 import React from "react";
 import Style from "@/styles/Game.module.scss";
 import Button from "./Start";
-import img from "@/images/Group 2.png";
+import img from "@/assets/images/Group 2.png";
 import Image from "next/image";
 
 const Menu: React.FC<MenuProps> = ({ onRouteChange }) => {

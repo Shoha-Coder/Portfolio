@@ -1,6 +1,6 @@
 import React from "react";
 import Style from "@/styles/Game.module.scss";
-import SnakesFood from "@/images/Snake's Food.svg";
+import SnakesFood from "@/assets/images/Snake's Food.svg";
 import Image from "next/image";
 
 const Food: React.FC<FoodProps> = ({ dot }): React.ReactElement => {

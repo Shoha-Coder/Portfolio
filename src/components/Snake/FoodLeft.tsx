@@ -1,7 +1,7 @@
 import React from "react";
 import Style from "@/styles/Game.module.scss";
-import FoodDisabled from "@/images/Snake's Food (1).svg";
-import FoodActive from "@/images/Snake's Food.svg";
+import FoodDisabled from "@/assets/images/Snake's Food (1).svg";
+import FoodActive from "@/assets/images/Snake's Food.svg";
 import Image from "next/image";
 
 const FoodLeft: React.FC<FoodLeftProps> = ({

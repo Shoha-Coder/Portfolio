@@ -1,8 +1,8 @@
 import React, { Dispatch, SetStateAction } from "react";
 import Style from "@/styles/AboutIconsSide.module.scss";
-import ProfessionalInfo from "@/images/professional-info-icon.png";
-import PersonalInfo from "@/images/personal-info-icon.png";
-import Hobbies from "@/images/hobbies-icon.png";
+import ProfessionalInfo from "@/assets/images/professional-info-icon.png";
+import PersonalInfo from "@/assets/images/personal-info-icon.png";
+import Hobbies from "@/assets/images/hobbies-icon.png";
 import Image from "next/image";
 
 const AboutIconsSide: React.FC<AboutIconsSide> = ({
