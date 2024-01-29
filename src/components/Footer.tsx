@@ -2,7 +2,7 @@ import React from "react";
 import Style from "@/styles/Footer.module.scss";
 import { RiFacebookFill, RiGithubFill, RiInstagramFill } from "react-icons/ri";
 
-const Footer = (): React.ReactElement => {
+const Footer: React.FC = (): React.ReactElement => {
   return (
     <footer className={Style.footer}>
       <div className={Style._left_side}>

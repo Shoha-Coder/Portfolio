@@ -5,7 +5,7 @@ import Style from "@/styles/Projects.module.scss";
 import FilteredProjects from "@/components/FilteredProjects";
 import Helmet from "@/components/Helmet";
 
-const Projects = (): React.ReactElement => {
+const Projects: React.FC = (): React.ReactElement => {
   const [reactChecked, setReactChecked] = useState<boolean>(false);
   const [nextChecked, setNextChecked] = useState<boolean>(false);
   const [viteChecked, setViteChecked] = useState<boolean>(false);

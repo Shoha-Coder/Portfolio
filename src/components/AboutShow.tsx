@@ -3,7 +3,7 @@ import Style from "@/styles/AboutShow.module.scss";
 import { RiCloseFill } from "react-icons/ri";
 import Link from "next/link";
 
-const ProfessionalInfoTabContent = (): React.ReactElement => {
+const ProfessionalInfoTabContent: React.FC = (): React.ReactElement => {
   return (
     <div className={Style.TabContent}>
       <ol>
@@ -20,7 +20,7 @@ const ProfessionalInfoTabContent = (): React.ReactElement => {
   );
 };
 
-const HobbiesTabContent = (): React.ReactElement => (
+const HobbiesTabContent: React.FC = (): React.ReactElement => (
   <div className={Style.TabContent}>
     <ol>
       <li>/**</li>
@@ -37,7 +37,7 @@ const HobbiesTabContent = (): React.ReactElement => (
   </div>
 );
 
-const BioTabContent = (): React.ReactElement => (
+const BioTabContent: React.FC = (): React.ReactElement => (
   <div className={Style.TabContent}>
     <ol>
       <li>/**</li>
@@ -80,7 +80,7 @@ const BioTabContent = (): React.ReactElement => (
   </div>
 );
 
-const InterestsTabContent = (): React.ReactElement => (
+const InterestsTabContent: React.FC = (): React.ReactElement => (
   <div className={Style.TabContent}>
     <ol>
       <li>/**</li>
@@ -103,7 +103,7 @@ const InterestsTabContent = (): React.ReactElement => (
   </div>
 );
 
-const EducationTabContent = (): React.ReactElement => (
+const EducationTabContent: React.FC = (): React.ReactElement => (
   <div className={Style.TabContent}>
     <ol>
       <li>/**</li>
@@ -122,7 +122,7 @@ const EducationTabContent = (): React.ReactElement => (
     </ol>
   </div>
 );
-const ProfessionalInfoTabContentMin = (): React.ReactElement => {
+const ProfessionalInfoTabContentMin: React.FC = (): React.ReactElement => {
   return (
     <div className={`${Style.TabContent} ${Style.MinTab}`}>
       <ol>
@@ -140,7 +140,7 @@ const ProfessionalInfoTabContentMin = (): React.ReactElement => {
   );
 };
 
-const HobbiesTabContentMin = (): React.ReactElement => (
+const HobbiesTabContentMin: React.FC = (): React.ReactElement => (
   <div className={`${Style.TabContent} ${Style.MinTab}`}>
     <ol>
       <li>/**</li>
@@ -162,7 +162,7 @@ const HobbiesTabContentMin = (): React.ReactElement => (
   </div>
 );
 
-const BioTabContentMin = (): React.ReactElement => (
+const BioTabContentMin: React.FC = (): React.ReactElement => (
   <div className={`${Style.TabContent} ${Style.MinTab}`}>
     <ol>
       <li>/**</li>
@@ -214,7 +214,7 @@ const BioTabContentMin = (): React.ReactElement => (
   </div>
 );
 
-const InterestsTabContentMin = (): React.ReactElement => (
+const InterestsTabContentMin: React.FC = (): React.ReactElement => (
   <div className={`${Style.TabContent} ${Style.MinTab}`}>
     <ol>
       <li>/**</li>
@@ -241,7 +241,7 @@ const InterestsTabContentMin = (): React.ReactElement => (
   </div>
 );
 
-const EducationTabContentMin = (): React.ReactElement => (
+const EducationTabContentMin: React.FC = (): React.ReactElement => (
   <div className={`${Style.TabContent} ${Style.MinTab}`}>
     <ol>
       <li>/**</li>
@@ -266,23 +266,7 @@ const EducationTabContentMin = (): React.ReactElement => (
   </div>
 );
 
-interface AboutShowProps {
-  isProfessionalInfoActive: boolean;
-  isHobbiesActive: boolean;
-  isBioFileActive: boolean;
-  isInterestsFileActive: boolean;
-  isEducationFileActive: boolean;
-  isProfessionalInfoFileActive: boolean;
-  isHobbiesFileActive: boolean;
-  setIsProfessionalInfoActive: Dispatch<SetStateAction<boolean>>;
-  setIsHobbiesActive: Dispatch<SetStateAction<boolean>>;
-  setIsBioFileActive: Dispatch<SetStateAction<boolean>>;
-  setIsInterestsFileActive: Dispatch<SetStateAction<boolean>>;
-  setIsEducationFileActive: Dispatch<SetStateAction<boolean>>;
-  setIsProfessionalInfoFileActive: Dispatch<SetStateAction<boolean>>;
-  setIsHobbiesFileActive: Dispatch<SetStateAction<boolean>>;
-}
-const AboutShow: React.FC<AboutShowProps> = ({
+const AboutShow: React.FC<AboutShow> = ({
   isProfessionalInfoActive,
   isHobbiesActive,
   isBioFileActive,

@@ -6,7 +6,7 @@ import AboutDropdowns from "@/components/AboutDropdowns";
 import AboutShow from "@/components/AboutShow";
 import Helmet from "@/components/Helmet";
 
-const About = (): React.ReactElement => {
+const About: React.FC = (): React.ReactElement => {
   const [isProfessionalInfoActive, setIsProfessionalInfoActive] =
     useState<boolean>(false);
   const [isProfessionalInfoFileActive, setIsProfessionalInfoFileActive] =

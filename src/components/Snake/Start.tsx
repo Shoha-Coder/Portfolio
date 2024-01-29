@@ -2,13 +2,7 @@ import React from "react";
 import Style from "@/styles/Start.module.scss";
 import StyleGame from "@/styles/Game.module.scss";
 
-interface Props {
-  onClick: Function;
-  children: string;
-  className: string;
-}
-
-const Button: React.FC<Props> = ({ onClick, children, className }) => {
+const Button: React.FC<StartGame> = ({ onClick, children, className }) => {
   return (
     <button
       onClick={(): void => onClick()}

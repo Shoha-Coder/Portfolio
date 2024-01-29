@@ -5,16 +5,7 @@ import PersonalInfo from "@/images/personal-info-icon.png";
 import Hobbies from "@/images/hobbies-icon.png";
 import Image from "next/image";
 
-interface AboutIconsSideProps {
-  isProfessionalInfoFileActive: boolean;
-  isPersonalInfoActive: boolean;
-  isHobbiesFileActive: boolean;
-  setIsProfessionalInfoFileActive: Dispatch<SetStateAction<boolean>>;
-  setIsPersonalInfoActive: Dispatch<SetStateAction<boolean>>;
-  setIsHobbiesFileActive: Dispatch<SetStateAction<boolean>>;
-}
-
-const AboutIconsSide: React.FC<AboutIconsSideProps> = ({
+const AboutIconsSide: React.FC<AboutIconsSide> = ({
   isProfessionalInfoFileActive,
   isPersonalInfoActive,
   isHobbiesFileActive,

@@ -4,10 +4,6 @@ import FoodDisabled from "@/images/Snake's Food (1).svg";
 import FoodActive from "@/images/Snake's Food.svg";
 import Image from "next/image";
 
-interface FoodLeftProps {
-  foodLeft: number;
-}
-
 const FoodLeft: React.FC<FoodLeftProps> = ({
   foodLeft = 10,
 }): React.ReactElement => {

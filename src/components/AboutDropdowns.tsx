@@ -14,34 +14,7 @@ import FileIcon from "@/images/FileIcon.svg";
 import Image from "next/image";
 import Link from "next/link";
 
-interface AboutDropdownsProps {
-  isBioActive: boolean;
-  isContactsActive: boolean;
-  isInterestsActive: boolean;
-  isEducationActive: boolean;
-  isProfessionalInfoActive: boolean;
-  isPersonalInfoActive: boolean;
-  isHobbiesActive: boolean;
-  isBioFileActive: boolean;
-  isInterestsFileActive: boolean;
-  isEducationFileActive: boolean;
-  isProfessionalInfoFileActive: boolean;
-  isHobbiesFileActive: boolean;
-  setIsBioActive: Dispatch<SetStateAction<boolean>>;
-  setIsContactsActive: Dispatch<SetStateAction<boolean>>;
-  setIsInterestsActive: Dispatch<SetStateAction<boolean>>;
-  setIsEducationActive: Dispatch<SetStateAction<boolean>>;
-  setIsProfessionalInfoActive: Dispatch<SetStateAction<boolean>>;
-  setIsPersonalInfoActive: Dispatch<SetStateAction<boolean>>;
-  setIsHobbiesActive: Dispatch<SetStateAction<boolean>>;
-  setIsBioFileActive: Dispatch<SetStateAction<boolean>>;
-  setIsInterestsFileActive: Dispatch<SetStateAction<boolean>>;
-  setIsEducationFileActive: Dispatch<SetStateAction<boolean>>;
-  setIsProfessionalInfoFileActive: Dispatch<SetStateAction<boolean>>;
-  setIsHobbiesFileActive: Dispatch<SetStateAction<boolean>>;
-}
-
-const AboutDropdowns: React.FC<AboutDropdownsProps> = ({
+const AboutDropdowns: React.FC<AboutDropdowns> = ({
   isBioActive,
   isContactsActive,
   isInterestsActive,

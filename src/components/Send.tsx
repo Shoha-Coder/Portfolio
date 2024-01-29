@@ -2,18 +2,7 @@ import React from "react";
 import Style from "@/styles/Send.module.scss";
 import SendEmail from "./sendEmail";
 
-interface Props {
-  activeTab: string;
-  name: string;
-  email: string;
-  message: string;
-  setActiveTab: Function;
-  setName: Function;
-  setEmail: Function;
-  setMessage: Function;
-}
-
-const Send: React.FC<Props> = ({
+const Send: React.FC<SendEmail> = ({
   activeTab,
   setActiveTab,
   name,

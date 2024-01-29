@@ -3,19 +3,8 @@ import Style from "@/styles/Card.module.scss";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
-interface Props {
-  ProjectImage: string;
-  CategoryImage: StaticImageData;
-  description: string;
-  AltText: string;
-  ProjectLink: string;
-  name: string;
-  categoryid: number;
-  CategoryImageClass: string;
-  ProjectNameClass: string;
-}
 
-const Card: React.FC<Props> = ({
+const Card: React.FC<Card> = ({
   ProjectImage,
   CategoryImage,
   description,

@@ -6,11 +6,7 @@ import BurgerMenu from "./BurgerMenu";
 import BurgerMenuStyle from "@/styles/BurgerMenu.module.scss";
 import { NextRouter, useRouter } from "next/router";
 
-interface ContainerProps {
-  children: ReactNode;
-}
-
-const Container: React.FC<ContainerProps> = ({
+const Container: React.FC<Container> = ({
   children,
 }): React.ReactElement => {
   const [isBurgerActive, setIsBurgerActive] = useState<boolean>(false);

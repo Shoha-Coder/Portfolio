@@ -12,15 +12,6 @@ import GameOverImg from "@/images/GameOver.png";
 import GmeWinImg from "@/images/GameWon.png";
 import Image from "next/image";
 
-interface GameState {
-  food: number[];
-  direction: string;
-  speed: number;
-  route: string;
-  snakeDots: number[][];
-  foodCount: number;
-}
-
 const getRandomFood = (): number[] => {
   const min = 1;
   const max = 98;
