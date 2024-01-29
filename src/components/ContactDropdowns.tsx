@@ -1,4 +1,4 @@
-import React, { Dispatch, ReactNode, SetStateAction } from "react";
+import React, { ReactNode } from "react";
 import Style from "@/styles/ContactDropdowns.module.scss";
 import {
   RiFacebookBoxFill,
@@ -11,6 +11,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import unActiveDropdownIcon from "@/assets/images/unactveDropdown.png";
+import { ContactDropdowns } from "@/assets/interface";
 
 const ContactDropdowns: React.FC<ContactDropdowns> = ({
   isContactActive,
@@ -19,7 +20,7 @@ const ContactDropdowns: React.FC<ContactDropdowns> = ({
   setIsContactActive,
   setIsContactFileActive,
   setFindMeActive,
-}): ReactNode => {
+}): React.ReactElement => {
   let UnActiveContact: string;
   let UnActiveFindMe: string;
   let ContactClick: Function;

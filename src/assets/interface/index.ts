@@ -1,25 +1,27 @@
+import { StaticImageData } from "next/image";
+import { Dispatch, ReactNode, SetStateAction } from "react";
 // type All pages
 
 // * Container:
 
-interface Container {
+export interface Container {
   children: ReactNode;
 }
 
 // * Helmet:
 
-interface HelmetProps {
+export interface Helmet {
   title: string;
 }
 
 // * Nav:
 
-interface Nav {
+export interface Nav {
   isBurgerActive: boolean;
   setIsBurgerActive: Dispatch<SetStateAction<boolean>>;
 }
 
-interface NavLink {
+export interface NavLink {
   id: number;
   name: string;
   path: string;
@@ -28,11 +30,18 @@ interface NavLink {
 
 // * BurgerMenu:
 
-interface BurgerMenu {
+
+export interface Burger {
+  click: () => void;
+  children: ReactNode;
+  className: string;
+};
+
+export interface BurgerMenu {
   className: string;
 }
 
-interface Link {
+export interface Links {
   id: number;
   name: string;
   path: string;
@@ -43,15 +52,15 @@ interface Link {
 
 // * Game:
 
-interface FoodProps {
+export interface Food {
   dot: number[];
 }
 
-interface FoodLeftProps {
+export interface FoodLeft {
   foodLeft: number;
 }
 
-interface GameState {
+export interface GameState {
   food: number[];
   direction: string;
   speed: number;
@@ -60,15 +69,15 @@ interface GameState {
   foodCount: number;
 }
 
-interface MenuProps {
+export interface Menu {
   onRouteChange: VoidFunction;
 }
 
-interface SnakeProps {
+export interface Snake {
   dot: number[];
 }
 
-interface StartGame {
+export interface StartGame {
   onClick: Function;
   children: string;
   className: string;
@@ -78,7 +87,7 @@ interface StartGame {
 
 // * AboutIconsSide:
 
-interface AboutIconsSide {
+export interface AboutIconsSide {
   isProfessionalInfoFileActive: boolean;
   isPersonalInfoActive: boolean;
   isHobbiesFileActive: boolean;
@@ -89,7 +98,7 @@ interface AboutIconsSide {
 
 // * AboutDropdowns:
 
-interface AboutDropdowns {
+export interface AboutDropdowns {
   isBioActive: boolean;
   isContactsActive: boolean;
   isInterestsActive: boolean;
@@ -118,7 +127,7 @@ interface AboutDropdowns {
 
 // * AboutShow:
 
-interface AboutShow {
+export interface AboutShow {
   isProfessionalInfoActive: boolean;
   isHobbiesActive: boolean;
   isBioFileActive: boolean;
@@ -139,7 +148,7 @@ interface AboutShow {
 
 // * ProjectsFilterSide:
 
-interface ProjectsFilterSide {
+export interface ProjectsFilterSide {
   reactChecked: boolean;
   nextChecked: boolean;
   viteChecked: boolean;
@@ -150,7 +159,7 @@ interface ProjectsFilterSide {
 
 // * FilteredProjects:
 
-interface FilteredProjects {
+export interface FilteredProjects {
   reactChecked: boolean;
   nextChecked: boolean;
   viteChecked: boolean;
@@ -159,7 +168,7 @@ interface FilteredProjects {
   setViteChecked: Dispatch<SetStateAction<boolean>>;
 }
 
-interface Project {
+export interface Project {
   id: number;
   category: string;
   ProjectImage: string;
@@ -173,7 +182,7 @@ interface Project {
 
 // * Card:
 
-interface Card {
+export interface Card {
   ProjectImage: string;
   CategoryImage: StaticImageData;
   description: string;
@@ -189,7 +198,7 @@ interface Card {
 
 // * ContactDropdowns:
 
-interface ContactDropdowns {
+export interface ContactDropdowns {
   isContactActive: boolean;
   isContactFileActive: boolean;
   findMeActive: boolean;
@@ -200,7 +209,7 @@ interface ContactDropdowns {
 
 // * ContactShow:
 
-interface ContactShow {
+export interface ContactShow {
   isContactFileActive: boolean;
   name: string;
   email: string;
@@ -213,7 +222,7 @@ interface ContactShow {
 
 // * Email js
 
-interface SendEmail {
+export interface Send_Email {
   activeTab: string;
   name: string;
   email: string;
@@ -224,7 +233,7 @@ interface SendEmail {
   setMessage: Dispatch<SetStateAction<string>>;
 }
 
-interface SentEmail {
+export interface SentEmail {
   activeTab: string;
   setActiveTab: Dispatch<SetStateAction<string>>;
 }

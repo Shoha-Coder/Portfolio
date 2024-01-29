@@ -1,6 +1,7 @@
 import React from "react";
 import Style from "@/styles/Start.module.scss";
 import StyleGame from "@/styles/Game.module.scss";
+import { StartGame } from "@/assets/interface";
 
 const Button: React.FC<StartGame> = ({ onClick, children, className }) => {
   return (

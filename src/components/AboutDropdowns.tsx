@@ -1,7 +1,5 @@
 import React, {
-  Dispatch,
   ReactElement,
-  SetStateAction,
   useEffect,
   useState,
 } from "react";
@@ -13,6 +11,7 @@ import { RiFolder5Fill } from "react-icons/ri";
 import FileIcon from "@/assets/images/FileIcon.svg";
 import Image from "next/image";
 import Link from "next/link";
+import { AboutDropdowns } from "@/assets/interface";
 
 const AboutDropdowns: React.FC<AboutDropdowns> = ({
   isBioActive,

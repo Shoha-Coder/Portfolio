@@ -4,6 +4,7 @@ import { FaReact } from "react-icons/fa";
 import unActiveDropdownIcon from "@/assets/images/unactveDropdown.png";
 import Image from "next/image";
 import { SiNextdotjs, SiVite } from "react-icons/si";
+import { ProjectsFilterSide } from "@/assets/interface";
 
 const ProjectsFilterSide: React.FC<ProjectsFilterSide> = ({
   reactChecked,

@@ -5,6 +5,7 @@ import { NextRouter, useRouter } from "next/router";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { RiCloseLine } from "react-icons/ri";
 import Burger from "./Burger";
+import { Nav, NavLink } from "@/assets/interface";
 
 const Nav: React.FC<Nav> = ({
   isBurgerActive,

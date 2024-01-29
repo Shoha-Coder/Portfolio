@@ -1,8 +1,9 @@
 import React from "react";
 import Style from "@/styles/Send.module.scss";
 import SendEmail from "./sendEmail";
+import { Send_Email } from "@/assets/interface";
 
-const Send: React.FC<SendEmail> = ({
+const Send: React.FC<Send_Email> = ({
   activeTab,
   setActiveTab,
   name,

@@ -11,6 +11,7 @@ import FoodLeft from "./FoodLeft";
 import GameOverImg from "@/assets/images/GameOver.png";
 import GmeWinImg from "@/assets/images/GameWon.png";
 import Image from "next/image";
+import { GameState } from "@/assets/interface";
 
 const getRandomFood = (): number[] => {
   const min = 1;

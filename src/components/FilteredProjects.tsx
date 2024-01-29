@@ -7,6 +7,7 @@ import Card from "./Card";
 import ViteIcon from "@/assets/images/Vite.svg";
 import NextjsIcon from "@/assets/images/nextjs.png";
 import { StaticImageData } from "next/image";
+import { FilteredProjects, Project } from "@/assets/interface";
 
 const ReactContent: React.FC = (): React.ReactElement => {
   const [projects, setProjects] = useState<[]>([]);

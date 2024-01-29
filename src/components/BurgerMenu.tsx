@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Style from "@/styles/BurgerMenu.module.scss";
 import { NextRouter, useRouter } from "next/router";
-
+import { BurgerMenu, Links } from "@/assets/interface";
 
 const BurgerMenu: React.FC<BurgerMenu> = ({
   className,
@@ -21,7 +21,7 @@ const BurgerMenu: React.FC<BurgerMenu> = ({
   } else if (router.pathname === "/Contact") {
     IsContactActive = true;
   }
-  const links: Link[] = [
+  const links: Links[] = [
     {
       id: 1,
       name: "_hello",
@@ -49,7 +49,7 @@ const BurgerMenu: React.FC<BurgerMenu> = ({
   ];
   return (
     <div className={`${Style.BurgerMenu} ${className}`}>
-      {links.map((link: Link): React.ReactElement => {
+      {links.map((link: Links): React.ReactElement => {
         return (
           <Link href={link.path} key={link.id} className={link.clas}>
             {link.name}
