@@ -1,5 +1,6 @@
 import React from "react";
 import Style from "@/styles/Sent.module.scss";
+import { SentEmail } from "@/assets/interface";
 
 
 const Sent: React.FC<SentEmail> = ({ activeTab, setActiveTab }) => {

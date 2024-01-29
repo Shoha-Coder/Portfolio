@@ -3,8 +3,9 @@ import Style from "@/styles/Game.module.scss";
 import FoodDisabled from "@/assets/images/Snake's Food (1).svg";
 import FoodActive from "@/assets/images/Snake's Food.svg";
 import Image from "next/image";
+import { FoodLeft } from "@/assets/interface";
 
-const FoodLeft: React.FC<FoodLeftProps> = ({
+const FoodLeft: React.FC<FoodLeft> = ({
   foodLeft = 10,
 }): React.ReactElement => {
   return (

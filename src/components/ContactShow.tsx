@@ -1,8 +1,9 @@
-import React, { Dispatch, SetStateAction, useState } from "react";
+import React, { useState } from "react";
 import Style from "@/styles/ContactShow.module.scss";
 import { RiCloseFill } from "react-icons/ri";
 import Send from "./Send";
 import Sent from "./Sent";
+import { ContactShow } from "@/assets/interface";
 
 
 const ContactShow: React.FC<ContactShow> = ({

@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Style from "@/styles/Card.module.scss";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 import Link from "next/link";
+import { Card } from "@/assets/interface";
 
 
 const Card: React.FC<Card> = ({

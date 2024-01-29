@@ -1,10 +1,11 @@
-import React, { ReactNode, useState } from "react";
+import React, { useState } from "react";
 import Nav from "./Nav";
 import Footer from "./Footer";
 import Style from "@/styles/Container.module.scss";
 import BurgerMenu from "./BurgerMenu";
 import BurgerMenuStyle from "@/styles/BurgerMenu.module.scss";
 import { NextRouter, useRouter } from "next/router";
+import { Container } from "@/assets/interface";
 
 const Container: React.FC<Container> = ({
   children,

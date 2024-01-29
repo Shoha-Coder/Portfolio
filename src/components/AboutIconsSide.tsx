@@ -1,9 +1,10 @@
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
 import Style from "@/styles/AboutIconsSide.module.scss";
 import ProfessionalInfo from "@/assets/images/professional-info-icon.png";
 import PersonalInfo from "@/assets/images/personal-info-icon.png";
 import Hobbies from "@/assets/images/hobbies-icon.png";
 import Image from "next/image";
+import { AboutIconsSide } from "@/assets/interface";
 
 const AboutIconsSide: React.FC<AboutIconsSide> = ({
   isProfessionalInfoFileActive,

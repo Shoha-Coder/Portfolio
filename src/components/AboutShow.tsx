@@ -1,7 +1,8 @@
-import React, { Dispatch, SetStateAction, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Style from "@/styles/AboutShow.module.scss";
 import { RiCloseFill } from "react-icons/ri";
 import Link from "next/link";
+import { AboutShow } from "@/assets/interface";
 
 const ProfessionalInfoTabContent: React.FC = (): React.ReactElement => {
   return (
