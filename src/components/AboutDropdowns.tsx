@@ -6,11 +6,11 @@ import React, {
   useState,
 } from "react";
 import Style from "@/styles/AboutDropdowns.module.scss";
-import unActiveDropdownIcon from "@/images/unactveDropdown.png";
-import FolderToggleIcon from "@/images/FolderToggleIcon.png";
+import unActiveDropdownIcon from "@/assets/images/unactveDropdown.png";
+import FolderToggleIcon from "@/assets/images/FolderToggleIcon.png";
 import { RiFolder3Fill, RiMailFill, RiPhoneFill } from "react-icons/ri";
 import { RiFolder5Fill } from "react-icons/ri";
-import FileIcon from "@/images/FileIcon.svg";
+import FileIcon from "@/assets/images/FileIcon.svg";
 import Image from "next/image";
 import Link from "next/link";
 

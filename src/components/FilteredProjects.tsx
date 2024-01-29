@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import Style from "@/styles/FilteredProjects.module.scss";
 import axios, { AxiosResponse } from "axios";
 import { RiCloseFill } from "react-icons/ri";
-import ReactIcon from "@/images/React.png";
+import ReactIcon from "@/assets/images/React.png";
 import Card from "./Card";
-import ViteIcon from "@/images/Vite.svg";
-import NextjsIcon from "@/images/nextjs.png";
+import ViteIcon from "@/assets/images/Vite.svg";
+import NextjsIcon from "@/assets/images/nextjs.png";
 import { StaticImageData } from "next/image";
 
 const ReactContent: React.FC = (): React.ReactElement => {

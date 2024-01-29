@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Style from "@/styles/ProjectsFilterSide.module.scss";
 import { FaReact } from "react-icons/fa";
-import unActiveDropdownIcon from "@/images/unactveDropdown.png";
+import unActiveDropdownIcon from "@/assets/images/unactveDropdown.png";
 import Image from "next/image";
 import { SiNextdotjs, SiVite } from "react-icons/si";
 

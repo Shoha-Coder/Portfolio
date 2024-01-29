@@ -10,7 +10,7 @@ import {
 } from "react-icons/ri";
 import Link from "next/link";
 import Image from "next/image";
-import unActiveDropdownIcon from "@/images/unactveDropdown.png";
+import unActiveDropdownIcon from "@/assets/images/unactveDropdown.png";
 
 const ContactDropdowns: React.FC<ContactDropdowns> = ({
   isContactActive,
