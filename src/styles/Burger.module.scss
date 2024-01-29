@@ -1,14 +1,14 @@
 @import "./vars.scss";
-.Burger{
-    display: none;
+.Burger {
+  display: none;
 }
 @include BreakpointDown(946) {
-    .Burger{
-        display: block;
-        background-color: transparent;
-        font-size: $x;
-        display: flex;
-        align-items: center;
-        margin-right: toRem(18);
-    }
+  .Burger {
+    display: block;
+    background-color: transparent;
+    font-size: $x;
+    display: flex;
+    align-items: center;
+    margin-right: toRem(18);
+  }
 }

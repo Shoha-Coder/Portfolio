@@ -86,9 +86,9 @@
   }
 }
 @include BreakpointDown(375) {
-  .nav{
-    ._left{
-      .My_NickName{
+  .nav {
+    ._left {
+      .My_NickName {
         width: auto;
       }
     }

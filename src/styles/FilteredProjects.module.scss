@@ -24,6 +24,7 @@
       position: absolute;
       top: 0;
       gap: toRem(12);
+      cursor: pointer;
       &.Active {
         transition: 0.5s ease;
         position: static;
@@ -31,10 +32,11 @@
         visibility: visible;
         &Tab {
           color: $secondary4;
-        transition: 0.5s ease;
-        position: static;
-        opacity: 1;
-        visibility: visible;
+          transition: 0.5s ease;
+          position: static;
+          opacity: 1;
+          visibility: visible;
+          cursor: auto;
         }
       }
       &.All {
@@ -46,9 +48,12 @@
       &.Next {
         width: toRem(120);
       }
-      &.Vite{
+      &.Vite {
         width: toRem(100);
       }
+    }
+    .CloseIcon {
+      cursor: pointer;
     }
   }
   .Cards {
@@ -68,7 +73,8 @@
         margin-bottom: toRem(14.79);
         span {
           color: #5565e8;
-        }}
+        }
+      }
     }
   }
 }
@@ -89,8 +95,8 @@
       border-bottom: none;
       .Tab {
         border-right: none;
-        .CloseIcon{
-            display: none;
+        .CloseIcon {
+          display: none;
         }
         &.ActiveTab {
           width: 100%;
@@ -98,8 +104,8 @@
         }
       }
     }
-    .Content{
-        padding-top: toRem(10);
+    .Content {
+      padding-top: toRem(10);
     }
   }
 }

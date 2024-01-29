@@ -9,6 +9,9 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    .CloseIcon {
+      cursor: pointer;
+    }
     .Tab {
       width: toRem(200.48);
       height: 100%;

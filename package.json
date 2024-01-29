@@ -5,25 +5,25 @@
   "homepage": "https://shoha-coder.uz/",
   "author": "Shoha_Coder",
   "scripts": {
-    "dev": "node server.js",
+    "dev": "NODE_ENV=production node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
-    "lint": "next lint",
-    "rm": "yarn remove"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.1.0",
-    "axios": "^1.6.2",
-    "concurrently": "^8.2.2",
-    "js-file-download": "^0.4.12",
-    "json-server": "^01.17.4",
-    "next": "14.0.4",
-    "react": "^18.2.01",
-    "react-dom": "^18.2.01",
-    "react-icons": "^4.12.011"
+    "@emailjs/browser": "^3.12.1",
+    "axios": "^1.6.7",
+    "next": "14.1.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-icons": "^5.0.1"
   },
   "devDependencies": {
-    "sass": "^1.169.5"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "sass": "^1.70.0",
+    "typescript": "^5"
   },
   "repository": {
     "type": "git",
