@@ -1,7 +1,7 @@
 import React from "react";
 import Style from "@/styles/HomeContent.module.scss";
 
-const HomeContent = (): React.ReactElement => {
+const HomeContent: React.FC = (): React.ReactElement => {
   return (
     <div className={Style.HomeContent}>
       <div className={Style.Top}>

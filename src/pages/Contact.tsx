@@ -5,7 +5,7 @@ import Helmet from "@/components/Helmet";
 import React, { useState } from "react";
 import Style from "@/styles/Contact.module.scss";
 
-const Contact = (): React.ReactElement => {
+const Contact: React.FC = (): React.ReactElement => {
   const [isContactActive, setIsContactActive] = useState<boolean>(false);
   const [isContactFileActive, setIsContactFileActive] = useState<boolean>(true);
   const [findMeActive, setFindMeActive] = useState<boolean>(false);

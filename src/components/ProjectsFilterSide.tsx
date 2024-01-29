@@ -5,16 +5,7 @@ import unActiveDropdownIcon from "@/images/unactveDropdown.png";
 import Image from "next/image";
 import { SiNextdotjs, SiVite } from "react-icons/si";
 
-interface Props {
-  reactChecked: boolean;
-  nextChecked: boolean;
-  viteChecked: boolean;
-  setReactChecked: Function;
-  setNextChecked: Function;
-  setViteChecked: Function;
-}
-
-const ProjectsFilterSide: React.FC<Props> = ({
+const ProjectsFilterSide: React.FC<ProjectsFilterSide> = ({
   reactChecked,
   setReactChecked,
   nextChecked,
@@ -22,7 +13,7 @@ const ProjectsFilterSide: React.FC<Props> = ({
   viteChecked,
   setViteChecked,
 }): React.ReactElement => {
-  const [dropdown, setDropdown]: [boolean, Function] = useState(false);
+  const [dropdown, setDropdown] = useState<boolean>(false);
   let DropdownClick: Function;
   let ReactClick: Function;
   let ViteClick: Function;
@@ -47,10 +38,10 @@ const ProjectsFilterSide: React.FC<Props> = ({
   } else {
     ViteClick = (): void => setViteChecked(true);
   }
-  const [bodyWidth, setBodyWidth]: [number, Function] = useState(0);
-  const [React, setReact]: [boolean, Function] = useState(false);
-  const [Nextjs, setNextjs]: [boolean, Function] = useState(false);
-  const [Vite, setVite]: [boolean, Function] = useState(false);
+  const [bodyWidth, setBodyWidth] = useState<number>(0);
+  const [React, setReact] = useState<boolean>(false);
+  const [Nextjs, setNextjs] = useState<boolean>(false);
+  const [Vite, setVite] = useState<boolean>(false);
   useEffect(() => {
     const handleResize = () => {
       setBodyWidth(window.innerWidth);

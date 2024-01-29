@@ -1,12 +1,8 @@
 import React from "react";
 import Style from "@/styles/Sent.module.scss";
 
-interface Props {
-  activeTab: string;
-  setActiveTab: Function;
-}
 
-const Sent: React.FC<Props> = ({ activeTab, setActiveTab }) => {
+const Sent: React.FC<SentEmail> = ({ activeTab, setActiveTab }) => {
   const handleTabClick = (tab: string) => {
     if (tab !== activeTab) {
       setActiveTab(tab);

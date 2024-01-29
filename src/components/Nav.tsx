@@ -6,19 +6,7 @@ import { RxHamburgerMenu } from "react-icons/rx";
 import { RiCloseLine } from "react-icons/ri";
 import Burger from "./Burger";
 
-interface NavProps {
-  isBurgerActive: boolean;
-  setIsBurgerActive: Function;
-}
-
-interface Link {
-  id: number;
-  name: string;
-  path: string;
-  clas: string;
-}
-
-const Nav: React.FC<NavProps> = ({
+const Nav: React.FC<Nav> = ({
   isBurgerActive,
   setIsBurgerActive,
 }): React.ReactElement => {
@@ -45,7 +33,7 @@ const Nav: React.FC<NavProps> = ({
   } else if (router.pathname === "/Contact") {
     IsContactActive = true;
   }
-  const links: Link[] = [
+  const links: NavLink[] = [
     {
       id: 1,
       name: "_hello",

@@ -8,20 +8,8 @@ import ViteIcon from "@/images/Vite.svg";
 import NextjsIcon from "@/images/nextjs.png";
 import { StaticImageData } from "next/image";
 
-interface Project {
-  id: number;
-  category: string;
-  ProjectImage: string;
-  description: string;
-  AltText: string;
-  link: string;
-  name: string;
-  categoryid: number;
-  CategoryImageClass: string;
-}
-
-const ReactContent = (): React.ReactElement => {
-  const [projects, setProjects]: [[], Function] = useState([]);
+const ReactContent: React.FC = (): React.ReactElement => {
+  const [projects, setProjects] = useState<[]>([]);
   useEffect((): void => {
     axios
       .get("https://back.shoha-coder.uz/projects")
@@ -51,8 +39,8 @@ const ReactContent = (): React.ReactElement => {
     </div>
   );
 };
-const NextjsContent = (): React.ReactElement => {
-  const [projects, setProjects]: [[], Function] = useState([]);
+const NextjsContent: React.FC = (): React.ReactElement => {
+  const [projects, setProjects] = useState<[]>([]);
   useEffect((): void => {
     axios
       .get("https://back.shoha-coder.uz/projects")
@@ -82,8 +70,8 @@ const NextjsContent = (): React.ReactElement => {
     </div>
   );
 };
-const ViteContent = (): React.ReactElement => {
-  const [projects, setProjects]: [[], Function] = useState([]);
+const ViteContent: React.FC = (): React.ReactElement => {
+  const [projects, setProjects] = useState<[]>([]);
   useEffect((): void => {
     axios
       .get("https://back.shoha-coder.uz/projects")
@@ -113,8 +101,8 @@ const ViteContent = (): React.ReactElement => {
     </div>
   );
 };
-const AllContent = (): React.ReactElement => {
-  const [projects, setProjects]: [[], Function] = useState([]);
+const AllContent: React.FC = (): React.ReactElement => {
+  const [projects, setProjects] = useState<[]>([]);
   useEffect((): void => {
     axios
       .get("https://back.shoha-coder.uz/projects")
@@ -151,16 +139,8 @@ const AllContent = (): React.ReactElement => {
   );
 };
 
-interface FilteredProjectsProps {
-  reactChecked: boolean;
-  nextChecked: boolean;
-  viteChecked: boolean;
-  setReactChecked: Function;
-  setNextChecked: Function;
-  setViteChecked: Function;
-}
 
-const FilteredProjects: React.FC<FilteredProjectsProps> = ({
+const FilteredProjects: React.FC<FilteredProjects> = ({
   reactChecked,
   nextChecked,
   viteChecked,
@@ -171,7 +151,7 @@ const FilteredProjects: React.FC<FilteredProjectsProps> = ({
   const handleReactClose = (): void => setReactChecked(false);
   const handleNextClose = (): void => setNextChecked(false);
   const handleViteClose = (): void => setViteChecked(false);
-  const [activeTab, setActiveTab]: [string, Function] = useState("null");
+  const [activeTab, setActiveTab] = useState<string>("null");
 
   useEffect((): void => {
     if (reactChecked) setActiveTab("react");
@@ -199,11 +179,11 @@ const FilteredProjects: React.FC<FilteredProjectsProps> = ({
         return <></>;
     }
   };
-  const [bodyWidth, setBodyWidth]: [number, Function] = useState(0);
-  const [reactContent, setReactContent]: [string, Function] = useState("");
-  const [nextjsContent, setNextjsContent]: [string, Function] = useState("");
-  const [viteContent, setViteContent]: [string, Function] = useState("");
-  const [allContent, setAllContent]: [string, Function] = useState("");
+  const [bodyWidth, setBodyWidth] = useState<number>(0);
+  const [reactContent, setReactContent] = useState<string>("");
+  const [nextjsContent, setNextjsContent] = useState<string>("");
+  const [viteContent, setViteContent] = useState<string>("");
+  const [allContent, setAllContent] = useState<string>("");
   useEffect(() => {
     const handleResize = (): void => {
       setBodyWidth(window.innerWidth);

@@ -12,16 +12,7 @@ import Link from "next/link";
 import Image from "next/image";
 import unActiveDropdownIcon from "@/images/unactveDropdown.png";
 
-interface ContactDropdownsProps {
-  isContactActive: boolean;
-  isContactFileActive: boolean;
-  findMeActive: boolean;
-  setIsContactActive: Dispatch<SetStateAction<boolean>>;
-  setIsContactFileActive: Dispatch<SetStateAction<boolean>>;
-  setFindMeActive: Dispatch<SetStateAction<boolean>>;
-}
-
-const ContactDropdowns: React.FC<ContactDropdownsProps> = ({
+const ContactDropdowns: React.FC<ContactDropdowns> = ({
   isContactActive,
   isContactFileActive,
   findMeActive,

@@ -3,11 +3,8 @@ import React from "react";
 import Style from "@/styles/BurgerMenu.module.scss";
 import { NextRouter, useRouter } from "next/router";
 
-interface BurgerMenuProps {
-  className: string;
-}
 
-const BurgerMenu: React.FC<BurgerMenuProps> = ({
+const BurgerMenu: React.FC<BurgerMenu> = ({
   className,
 }): React.ReactElement => {
   const router: NextRouter = useRouter();
@@ -23,12 +20,6 @@ const BurgerMenu: React.FC<BurgerMenuProps> = ({
     IsProjectsActive = true;
   } else if (router.pathname === "/Contact") {
     IsContactActive = true;
-  }
-  interface Link {
-    id: number;
-    name: string;
-    path: string;
-    clas: string;
   }
   const links: Link[] = [
     {

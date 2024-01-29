@@ -4,18 +4,8 @@ import { RiCloseFill } from "react-icons/ri";
 import Send from "./Send";
 import Sent from "./Sent";
 
-interface ContactShowProps {
-  isContactFileActive: boolean;
-  name: string;
-  email: string;
-  message: string;
-  setIsContactFileActive: Dispatch<SetStateAction<boolean>>;
-  setName: Dispatch<SetStateAction<string>>;
-  setEmail: Dispatch<SetStateAction<string>>;
-  setMessage: Dispatch<SetStateAction<string>>;
-}
 
-const ContactShow: React.FC<ContactShowProps> = ({
+const ContactShow: React.FC<ContactShow> = ({
   isContactFileActive,
   name,
   email,

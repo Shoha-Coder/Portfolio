@@ -6,7 +6,7 @@ import Game from "@/components/Snake/Game";
 import Container from "@/components/Container";
 import React from "react";
 
-const Home = (): React.ReactElement => {
+const Home: React.FC = (): React.ReactElement => {
   return (
     <Container>
       <Helmet title="Home" />

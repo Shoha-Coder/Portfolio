@@ -1,10 +1,6 @@
 import React from "react";
 import Style from "@/styles/Game.module.scss";
 
-interface SnakeProps {
-  dot: number[];
-}
-
 const SnakeSegment: React.FC<SnakeProps> = ({ dot }) => {
   const style = {
     left: `${dot[0]}%`,

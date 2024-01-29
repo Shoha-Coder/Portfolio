@@ -1,6 +1,6 @@
 import emailjs from "@emailjs/browser";
 
-const SendEmail = (templateParams: Record<string, unknown>): void => {
+const SendEmail: Function = (templateParams: Record<string, unknown>): void => {
   emailjs
     .send(
       "Shoha_Coder",

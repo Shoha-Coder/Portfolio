@@ -3,10 +3,6 @@ import Style from "@/styles/Game.module.scss";
 import SnakesFood from "@/images/Snake's Food.svg";
 import Image from "next/image";
 
-interface FoodProps {
-  dot: number[];
-}
-
 const Food: React.FC<FoodProps> = ({ dot }): React.ReactElement => {
   const style: React.CSSProperties = {
     left: `${dot[0]}%`,
