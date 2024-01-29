@@ -5,7 +5,7 @@
   "homepage": "https://shoha-coder.uz/",
   "author": "Shoha_Coder",
   "scripts": {
-    "dev": "NODE_ENV=production node server.js",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
