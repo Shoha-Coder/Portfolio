@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useContext } from "react";
 import Style from "@/styles/ContactDropdowns.module.scss";
 import {
   RiFacebookBoxFill,
@@ -12,15 +12,16 @@ import Link from "next/link";
 import Image from "next/image";
 import unActiveDropdownIcon from "@/assets/images/unactveDropdown.png";
 import { ContactDropdowns } from "@/assets/interface";
+import { Context } from "@/assets/Context/Context";
 
-const ContactDropdowns: React.FC<ContactDropdowns> = ({
-  isContactActive,
-  isContactFileActive,
-  findMeActive,
-  setIsContactActive,
-  setIsContactFileActive,
-  setFindMeActive,
-}): React.ReactElement => {
+const ContactDropdowns: React.FC = (): React.ReactElement => {
+  const {
+    isContactActive,
+    findMeActive,
+    setIsContactActive,
+    setIsContactFileActive,
+    setFindMeActive,
+  }: ContactDropdowns = useContext(Context);
   let UnActiveContact: string;
   let UnActiveFindMe: string;
   let ContactClick: Function;

@@ -2,6 +2,55 @@ import { StaticImageData } from "next/image";
 import { Dispatch, ReactNode, SetStateAction } from "react";
 // type All pages
 
+// * Context:
+export interface ContextInterface {
+  isBioActive: boolean;
+  isContactsActive: boolean;
+  isInterestsActive: boolean;
+  isEducationActive: boolean;
+  isProfessionalInfoActive: boolean;
+  isPersonalInfoActive: boolean;
+  isHobbiesActive: boolean;
+  isBioFileActive: boolean;
+  isInterestsFileActive: boolean;
+  isEducationFileActive: boolean;
+  isProfessionalInfoFileActive: boolean;
+  isHobbiesFileActive: boolean;
+  reactChecked: boolean;
+  nextChecked: boolean;
+  viteChecked: boolean;
+  isContactActive: boolean;
+  isContactFileActive: boolean;
+  findMeActive: boolean;
+  name: string;
+  email: string;
+  message: string;
+  setIsBioActive: Dispatch<SetStateAction<boolean>>;
+  setIsContactsActive: Dispatch<SetStateAction<boolean>>;
+  setIsInterestsActive: Dispatch<SetStateAction<boolean>>;
+  setIsEducationActive: Dispatch<SetStateAction<boolean>>;
+  setIsProfessionalInfoActive: Dispatch<SetStateAction<boolean>>;
+  setIsPersonalInfoActive: Dispatch<SetStateAction<boolean>>;
+  setIsHobbiesActive: Dispatch<SetStateAction<boolean>>;
+  setIsBioFileActive: Dispatch<SetStateAction<boolean>>;
+  setIsInterestsFileActive: Dispatch<SetStateAction<boolean>>;
+  setIsEducationFileActive: Dispatch<SetStateAction<boolean>>;
+  setIsProfessionalInfoFileActive: Dispatch<SetStateAction<boolean>>;
+  setIsHobbiesFileActive: Dispatch<SetStateAction<boolean>>;
+  setReactChecked: Dispatch<SetStateAction<boolean>>;
+  setNextChecked: Dispatch<SetStateAction<boolean>>;
+  setViteChecked: Dispatch<SetStateAction<boolean>>;
+  setIsContactActive: Dispatch<SetStateAction<boolean>>;
+  setIsContactFileActive: Dispatch<SetStateAction<boolean>>;
+  setFindMeActive: Dispatch<SetStateAction<boolean>>;
+  setName: Dispatch<SetStateAction<string>>;
+  setEmail: Dispatch<SetStateAction<string>>;
+  setMessage: Dispatch<SetStateAction<string>>;
+}
+export interface ContextProvider {
+  children: ReactNode;
+}
+
 // * Container:
 
 export interface Container {
@@ -30,12 +79,11 @@ export interface NavLink {
 
 // * BurgerMenu:
 
-
 export interface Burger {
   click: () => void;
   children: ReactNode;
   className: string;
-};
+}
 
 export interface BurgerMenu {
   className: string;
@@ -93,35 +141,6 @@ export interface AboutIconsSide {
   isHobbiesFileActive: boolean;
   setIsProfessionalInfoFileActive: Dispatch<SetStateAction<boolean>>;
   setIsPersonalInfoActive: Dispatch<SetStateAction<boolean>>;
-  setIsHobbiesFileActive: Dispatch<SetStateAction<boolean>>;
-}
-
-// * AboutDropdowns:
-
-export interface AboutDropdowns {
-  isBioActive: boolean;
-  isContactsActive: boolean;
-  isInterestsActive: boolean;
-  isEducationActive: boolean;
-  isProfessionalInfoActive: boolean;
-  isPersonalInfoActive: boolean;
-  isHobbiesActive: boolean;
-  isBioFileActive: boolean;
-  isInterestsFileActive: boolean;
-  isEducationFileActive: boolean;
-  isProfessionalInfoFileActive: boolean;
-  isHobbiesFileActive: boolean;
-  setIsBioActive: Dispatch<SetStateAction<boolean>>;
-  setIsContactsActive: Dispatch<SetStateAction<boolean>>;
-  setIsInterestsActive: Dispatch<SetStateAction<boolean>>;
-  setIsEducationActive: Dispatch<SetStateAction<boolean>>;
-  setIsProfessionalInfoActive: Dispatch<SetStateAction<boolean>>;
-  setIsPersonalInfoActive: Dispatch<SetStateAction<boolean>>;
-  setIsHobbiesActive: Dispatch<SetStateAction<boolean>>;
-  setIsBioFileActive: Dispatch<SetStateAction<boolean>>;
-  setIsInterestsFileActive: Dispatch<SetStateAction<boolean>>;
-  setIsEducationFileActive: Dispatch<SetStateAction<boolean>>;
-  setIsProfessionalInfoFileActive: Dispatch<SetStateAction<boolean>>;
   setIsHobbiesFileActive: Dispatch<SetStateAction<boolean>>;
 }
 

@@ -1,8 +1,4 @@
-import React, {
-  ReactElement,
-  useEffect,
-  useState,
-} from "react";
+import React, { ReactElement, useContext, useEffect, useState } from "react";
 import Style from "@/styles/AboutDropdowns.module.scss";
 import unActiveDropdownIcon from "@/assets/images/unactveDropdown.png";
 import FolderToggleIcon from "@/assets/images/FolderToggleIcon.png";
@@ -11,34 +7,31 @@ import { RiFolder5Fill } from "react-icons/ri";
 import FileIcon from "@/assets/images/FileIcon.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { AboutDropdowns } from "@/assets/interface";
+import { Context } from "@/assets/Context/Context";
+import { ContextInterface } from "@/assets/interface";
 
-const AboutDropdowns: React.FC<AboutDropdowns> = ({
-  isBioActive,
-  isContactsActive,
-  isInterestsActive,
-  isEducationActive,
-  isProfessionalInfoActive,
-  isPersonalInfoActive,
-  isHobbiesActive,
-  isBioFileActive,
-  isInterestsFileActive,
-  isEducationFileActive,
-  isProfessionalInfoFileActive,
-  isHobbiesFileActive,
-  setIsBioActive,
-  setIsContactsActive,
-  setIsInterestsActive,
-  setIsEducationActive,
-  setIsProfessionalInfoActive,
-  setIsPersonalInfoActive,
-  setIsHobbiesActive,
-  setIsBioFileActive,
-  setIsInterestsFileActive,
-  setIsEducationFileActive,
-  setIsProfessionalInfoFileActive,
-  setIsHobbiesFileActive,
-}): React.ReactElement => {
+const AboutDropdowns: React.FC = (): React.ReactElement => {
+  const {
+    isBioActive,
+    isContactsActive,
+    isInterestsActive,
+    isEducationActive,
+    isProfessionalInfoActive,
+    isPersonalInfoActive,
+    isHobbiesActive,
+    setIsBioActive,
+    setIsContactsActive,
+    setIsInterestsActive,
+    setIsEducationActive,
+    setIsProfessionalInfoActive,
+    setIsPersonalInfoActive,
+    setIsHobbiesActive,
+    setIsBioFileActive,
+    setIsInterestsFileActive,
+    setIsEducationFileActive,
+    setIsProfessionalInfoFileActive,
+    setIsHobbiesFileActive,
+  }: ContextInterface = useContext(Context);
   let PersonalClick: Function;
   let BioFolderIcon: ReactElement;
   let InterestsFolderIcon: ReactElement;

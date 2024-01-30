@@ -1,19 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Style from "@/styles/ProjectsFilterSide.module.scss";
 import { FaReact } from "react-icons/fa";
 import unActiveDropdownIcon from "@/assets/images/unactveDropdown.png";
 import Image from "next/image";
 import { SiNextdotjs, SiVite } from "react-icons/si";
-import { ProjectsFilterSide } from "@/assets/interface";
+import { ContextInterface } from "@/assets/interface";
+import { Context } from "@/assets/Context/Context";
 
-const ProjectsFilterSide: React.FC<ProjectsFilterSide> = ({
-  reactChecked,
-  setReactChecked,
-  nextChecked,
-  setNextChecked,
-  viteChecked,
-  setViteChecked,
-}): React.ReactElement => {
+const ProjectsFilterSide: React.FC = (): React.ReactElement => {
+  const {
+    reactChecked,
+    nextChecked,
+    viteChecked,
+    setReactChecked,
+    setNextChecked,
+    setViteChecked,
+  }: ContextInterface = useContext(Context);
   const [dropdown, setDropdown] = useState<boolean>(false);
   let DropdownClick: Function;
   let ReactClick: Function;

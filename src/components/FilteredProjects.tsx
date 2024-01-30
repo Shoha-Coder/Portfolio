@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Style from "@/styles/FilteredProjects.module.scss";
 import axios, { AxiosResponse } from "axios";
 import { RiCloseFill } from "react-icons/ri";
@@ -7,13 +7,14 @@ import Card from "./Card";
 import ViteIcon from "@/assets/images/Vite.svg";
 import NextjsIcon from "@/assets/images/nextjs.png";
 import { StaticImageData } from "next/image";
-import { FilteredProjects, Project } from "@/assets/interface";
+import { ContextInterface, Project } from "@/assets/interface";
+import { Context } from "@/assets/Context/Context";
 
 const ReactContent: React.FC = (): React.ReactElement => {
   const [projects, setProjects] = useState<[]>([]);
   useEffect((): void => {
     axios
-      .get("https://back.shoha-coder.uz/projects")
+      .get("https://portfolio-back-xoee.onrender.com/projects")
       .then((response: AxiosResponse): void => setProjects(response.data));
   }, []);
   return (
@@ -44,7 +45,7 @@ const NextjsContent: React.FC = (): React.ReactElement => {
   const [projects, setProjects] = useState<[]>([]);
   useEffect((): void => {
     axios
-      .get("https://back.shoha-coder.uz/projects")
+      .get("https://portfolio-back-xoee.onrender.com/projects")
       .then((response: AxiosResponse): void => setProjects(response.data));
   }, []);
   return (
@@ -75,7 +76,7 @@ const ViteContent: React.FC = (): React.ReactElement => {
   const [projects, setProjects] = useState<[]>([]);
   useEffect((): void => {
     axios
-      .get("https://back.shoha-coder.uz/projects")
+      .get("https://portfolio-back-xoee.onrender.com/projects")
       .then((response: AxiosResponse): void => setProjects(response.data));
   }, []);
   return (
@@ -106,7 +107,7 @@ const AllContent: React.FC = (): React.ReactElement => {
   const [projects, setProjects] = useState<[]>([]);
   useEffect((): void => {
     axios
-      .get("https://back.shoha-coder.uz/projects")
+      .get("https://portfolio-back-xoee.onrender.com/projects")
       .then((response: AxiosResponse): void => setProjects(response.data));
   }, []);
   return (
@@ -140,15 +141,15 @@ const AllContent: React.FC = (): React.ReactElement => {
   );
 };
 
-
-const FilteredProjects: React.FC<FilteredProjects> = ({
-  reactChecked,
-  nextChecked,
-  viteChecked,
-  setReactChecked,
-  setNextChecked,
-  setViteChecked,
-}): React.ReactElement => {
+const FilteredProjects: React.FC = (): React.ReactElement => {
+  const {
+    reactChecked,
+    nextChecked,
+    viteChecked,
+    setReactChecked,
+    setNextChecked,
+    setViteChecked,
+  }: ContextInterface = useContext(Context);
   const handleReactClose = (): void => setReactChecked(false);
   const handleNextClose = (): void => setNextChecked(false);
   const handleViteClose = (): void => setViteChecked(false);
