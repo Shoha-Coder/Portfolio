@@ -1,21 +1,23 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Style from "@/styles/ContactShow.module.scss";
 import { RiCloseFill } from "react-icons/ri";
 import Send from "./Send";
 import Sent from "./Sent";
-import { ContactShow } from "@/assets/interface";
+import { ContextInterface } from "@/assets/interface";
+import { Context } from "@/assets/Context/Context";
 
 
-const ContactShow: React.FC<ContactShow> = ({
-  isContactFileActive,
-  name,
-  email,
-  message,
-  setIsContactFileActive,
-  setName,
-  setEmail,
-  setMessage,
-}): React.ReactElement => {
+const ContactShow: React.FC = (): React.ReactElement => {
+  const {
+    isContactFileActive,
+    name,
+    email,
+    message,
+    setIsContactFileActive,
+    setName,
+    setEmail,
+    setMessage,
+  }: ContextInterface = useContext(Context)
   const handleClose = (): void => setIsContactFileActive(false);
   const [activeTab, setActiveTab] = useState<string>("null");
 

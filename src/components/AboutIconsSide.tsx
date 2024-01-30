@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import Style from "@/styles/AboutIconsSide.module.scss";
 import ProfessionalInfo from "@/assets/images/professional-info-icon.png";
 import PersonalInfo from "@/assets/images/personal-info-icon.png";
 import Hobbies from "@/assets/images/hobbies-icon.png";
 import Image from "next/image";
-import { AboutIconsSide } from "@/assets/interface";
+import { Context } from "@/assets/Context/Context";
+import { ContextInterface } from "@/assets/interface";
 
-const AboutIconsSide: React.FC<AboutIconsSide> = ({
-  isProfessionalInfoFileActive,
-  isPersonalInfoActive,
-  isHobbiesFileActive,
-  setIsProfessionalInfoFileActive,
-  setIsPersonalInfoActive,
-  setIsHobbiesFileActive,
-}): React.ReactElement => {
+const AboutIconsSide: React.FC = (): React.ReactElement => {
+  const {
+    isProfessionalInfoFileActive,
+    setIsProfessionalInfoFileActive,
+    isPersonalInfoActive,
+    setIsPersonalInfoActive,
+    isHobbiesFileActive,
+    setIsHobbiesFileActive,
+  }: ContextInterface = useContext(Context);
   let ProfessionalClick: Function;
   let PersonalClick: Function;
   let HobbiesClick: Function;

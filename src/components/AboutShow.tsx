@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Style from "@/styles/AboutShow.module.scss";
 import { RiCloseFill } from "react-icons/ri";
 import Link from "next/link";
-import { AboutShow } from "@/assets/interface";
+import { Context } from "@/assets/Context/Context";
+import { ContextInterface } from "@/assets/interface";
 
 const ProfessionalInfoTabContent: React.FC = (): React.ReactElement => {
   return (
@@ -267,28 +268,19 @@ const EducationTabContentMin: React.FC = (): React.ReactElement => (
   </div>
 );
 
-const AboutShow: React.FC<AboutShow> = ({
-  isProfessionalInfoActive,
-  isHobbiesActive,
-  isBioFileActive,
-  isInterestsFileActive,
-  isEducationFileActive,
-  isProfessionalInfoFileActive,
-  isHobbiesFileActive,
-  setIsProfessionalInfoActive,
-  setIsHobbiesActive,
-  setIsBioFileActive,
-  setIsInterestsFileActive,
-  setIsEducationFileActive,
-  setIsProfessionalInfoFileActive,
-  setIsHobbiesFileActive,
-}): React.ReactElement => {
-  const [ProfessionalInfoTab, setProfessionalInfoTab] =
-    useState<boolean>(false);
-  const [InterestsTab, setInterestsTab] = useState<boolean>(false);
-  const [BioTab, setBioTab] = useState<boolean>(false);
-  const [EduTab, setEduTab] = useState<boolean>(false);
-  const [HobbiesTab, setHobbiesTab] = useState<boolean>(false);
+const AboutShow: React.FC = (): React.ReactElement => {
+  const {
+    isBioFileActive,
+    isInterestsFileActive,
+    isEducationFileActive,
+    isProfessionalInfoFileActive,
+    isHobbiesFileActive,
+    setIsBioFileActive,
+    setIsInterestsFileActive,
+    setIsEducationFileActive,
+    setIsProfessionalInfoFileActive,
+    setIsHobbiesFileActive,
+  }: ContextInterface = useContext(Context);
   const handleProfessionalInfoClose = (): void =>
     setIsProfessionalInfoFileActive(false);
   const handleHobbiesClose = (): void => setIsHobbiesFileActive(false);
