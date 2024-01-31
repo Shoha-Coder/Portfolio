@@ -51,8 +51,7 @@ const BioTabContent: React.FC = (): React.ReactElement => (
       <li>
         * journey has been focused on mastering technologie such as Next.js,
       </li>
-      <li>* React, HTML, CSS, SCSS, JavaScript, Node.js, Git, and gaining a</li>
-      <li>* foundational understanding of Express.js.</li>
+      <li>* React, HTML, CSS, SCSS, JavaScript, TypeScript, Git, </li>
       <li>* I take pride in achieving the A+ Front-end award at IT-Academy,</li>
       <li>
         * showcasing my commitment to excellence in the field despite not having
@@ -114,8 +113,7 @@ const EducationTabContent: React.FC = (): React.ReactElement => (
         * IT Academy from April 2023 to September 2023, achieving an A+ grade
       </li>
       <li>* My expertise extends to building projects using cutting-edge</li>
-      <li>* technologies such as React JS, Next.js, React TypeScript</li>
-      <li>* R Next.js TypeScript, and React Native TypeScript.</li>
+      <li>* technologies such as React JS, Next.js, TypeScript,</li>
       <li>* With a portfolio of over nine projects, I have demonstrated</li>
       <li>* my proficiency in creating robust and scalable applications.</li>
       <li>* I am enthusiastic about applying my skills to contribute</li>
@@ -150,7 +148,7 @@ const HobbiesTabContentMin: React.FC = (): React.ReactElement => (
       <li>* who loves crafting websites</li>
       <li>* using React and Next.js,</li>
       <li>* exploring the dynamic power </li>
-      <li>* of JavaScript. When not</li>
+      <li>* of TypeScript. When not</li>
       <li>* coding, I'm conquering</li>
       <li>* virtual battlefields in</li>
       <li>* Counter-Strike 2, mastering</li>
@@ -180,8 +178,7 @@ const BioTabContentMin: React.FC = (): React.ReactElement => (
       <li>* technologie such as Next.js,</li>
       <li>* React, HTML, CSS, SCSS,</li>
       <li>* JavaScript, Git, and</li>
-      <li>* gaining a foundational</li>
-      <li>* understanding of Express.js.</li>
+      <li>* TypeScript,</li>
       <li>* I take pride in achieving</li>
       <li>* the A+ Front-end award at</li>
       <li>* IT-Academy, showcasing my</li>
