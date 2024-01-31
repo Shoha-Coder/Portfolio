@@ -2,6 +2,16 @@ import { StaticImageData } from "next/image";
 import { Dispatch, ReactNode, SetStateAction } from "react";
 // type All pages
 
+// * SEO:
+
+export interface SeoProps {
+  children: ReactNode;
+  metaTitle: string;
+  metaDescription: string;
+  author: string;
+  metaKeywords: string;
+}
+
 // * Context:
 export interface ContextInterface {
   isBioActive: boolean;
@@ -55,12 +65,6 @@ export interface ContextProvider {
 
 export interface Container {
   children: ReactNode;
-}
-
-// * Helmet:
-
-export interface Helmet {
-  title: string;
 }
 
 // * Nav:
