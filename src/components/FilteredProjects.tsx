@@ -14,7 +14,7 @@ const ReactContent: React.FC = (): React.ReactElement => {
   const [projects, setProjects] = useState<[]>([]);
   useEffect((): void => {
     axios
-      .get("https://portfolio-back-xoee.onrender.com/projects")
+      .get("https://back.shoha-coder.uz/projects")
       .then((response: AxiosResponse): void => setProjects(response.data));
   }, []);
   return (
@@ -45,7 +45,7 @@ const NextjsContent: React.FC = (): React.ReactElement => {
   const [projects, setProjects] = useState<[]>([]);
   useEffect((): void => {
     axios
-      .get("https://portfolio-back-xoee.onrender.com/projects")
+      .get("https://back.shoha-coder.uz/projects")
       .then((response: AxiosResponse): void => setProjects(response.data));
   }, []);
   return (
@@ -76,7 +76,7 @@ const ViteContent: React.FC = (): React.ReactElement => {
   const [projects, setProjects] = useState<[]>([]);
   useEffect((): void => {
     axios
-      .get("https://portfolio-back-xoee.onrender.com/projects")
+      .get("https://back.shoha-coder.uz/projects")
       .then((response: AxiosResponse): void => setProjects(response.data));
   }, []);
   return (
@@ -107,7 +107,7 @@ const AllContent: React.FC = (): React.ReactElement => {
   const [projects, setProjects] = useState<[]>([]);
   useEffect((): void => {
     axios
-      .get("https://portfolio-back-xoee.onrender.com/projects")
+      .get("https://back.shoha-coder.uz/projects")
       .then((response: AxiosResponse): void => setProjects(response.data));
   }, []);
   return (
