@@ -12,13 +12,20 @@ const SEO: React.FC<SeoProps> = ({
   return (
     <>
       <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5"
+        />
         <title>{metaTitle}</title>
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <meta name="keyword" content={metaKeywords} />
         <meta name="author" content={author} />
         <meta name="description" content={metaDescription} />
         <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+        <meta
+          name="google-site-verification"
+          content="LEHoGtjiPhe7nBgOSzpT3Top-nNKx1eaBlllOPQLn8o"
+        />
       </Head>
       {children}
     </>
