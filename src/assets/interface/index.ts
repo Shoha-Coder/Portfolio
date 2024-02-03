@@ -2,6 +2,21 @@ import { StaticImageData } from "next/image";
 import { Dispatch, ReactNode, SetStateAction } from "react";
 // type All pages
 
+// * Projects: 
+
+export interface Data {
+  projects: Array<{
+    id: number;
+    category: string;
+    projectImage: string;
+    description: string;
+    altText: string;
+    link: string;
+    name: string;
+    categoryId: number;
+  }>;
+};
+
 // * SEO:
 
 export interface SeoProps {
@@ -200,7 +215,6 @@ export interface Project {
   link: string;
   name: string;
   categoryid: number;
-  CategoryImageClass: string;
 }
 
 // * Card:
@@ -213,7 +227,6 @@ export interface Card {
   ProjectLink: string;
   name: string;
   categoryid: number;
-  CategoryImageClass: string;
   ProjectNameClass: string;
 }
 
