@@ -9,9 +9,7 @@ const Projects: React.FC = (): React.ReactElement => {
   return (
     <SEO
       metaTitle="Shoha-Coder | Projects"
-      metaKeywords={
-        process.env.META_KEYWORD || "shoha_coder, shoha coder, shohacoder"
-      }
+      metaKeywords={process.env.META_KEYWORD_PROJECTS || ""}
       metaDescription="Shoha Coder's Portfolio Projects Page"
       author="Shoha Coder"
     >
