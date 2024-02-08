@@ -42,7 +42,6 @@ const SEO: React.FC<SeoProps> = ({
           property="og:image"
           content="https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v3/shoha-coder.uz/Shoha_Coder%20-%20Portfolio/https%3A%2F%2Fshoha-coder.uz%2Fopengraph.png/og.png"
         />
-        <meta name="twitter:card" content="summary_large_image" />
         <meta property="twitter:domain" content="shoha-coder.uz" />
         <meta property="twitter:url" content="https://shoha-coder.uz" />
         <meta name="twitter:title" content="Shoha_Coder - Portfolio" />
@@ -54,6 +53,16 @@ const SEO: React.FC<SeoProps> = ({
           name="twitter:image"
           content="https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v3/shoha-coder.uz/Shoha_Coder%20-%20Portfolio/https%3A%2F%2Fshoha-coder.uz%2Fopengraph.png/og.png"
         />
+        <meta
+          property="telegram:image"
+          content="https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v3/shoha-coder.uz/Shoha_Coder%20-%20Portfolio/https%3A%2F%2Fshoha-coder.uz%2Fopengraph.png/og.png"
+        />
+        <meta
+          name="telegram:description"
+          content="Front-end developer (JSX & TSX), web developer. Operational layout. I work with observance of terms and performance of Test tasks."
+        />
+        <meta name="twitter:site" content="@shoha_coder" />
+        <meta name="telegram:site" content="@shoha_coder" />
       </Head>
       {children}
     </>
