@@ -24,6 +24,10 @@ const SEO: React.FC<SeoProps> = ({
         <meta name="description" content={metaDescription} />
         <meta name="og:description" content={metaDescription} />
         <meta
+          name="google-site-verification"
+          content="LEHoGtjiPhe7nBgOSzpT3Top-nNKx1eaBlllOPQLn8o"
+        />
+        <meta
           name="description"
           content="Front-end developer (JSX & TSX), web developer. Operational layout. I work with observance of terms and performance of Test tasks."
         />
