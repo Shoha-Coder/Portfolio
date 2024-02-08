@@ -26,7 +26,7 @@ const SEO: React.FC<SeoProps> = ({
         <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
         <meta property="og:image:width" content="1280" />
         <meta property="og:image:height" content="640" />
-        <meta property="og:image" content="/opengraph.png" />
+        <meta property="og:image" content="https://shoha-coder.uz/opengraph.png" />
         <meta property="og:image:alt" content="error" />
         <meta property="twitter:site" content="@shoha_coder" />
         <meta
