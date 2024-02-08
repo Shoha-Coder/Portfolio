@@ -4,10 +4,8 @@ import React from "react";
 
 const SEO: React.FC<SeoProps> = ({
   children,
-  metaDescription,
   metaKeywords,
   metaTitle,
-  author,
 }) => {
   return (
     <>
@@ -20,9 +18,9 @@ const SEO: React.FC<SeoProps> = ({
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <meta name="keywords" content={metaKeywords} />
         <meta name="keywords:tag" content={metaKeywords} />
-        <meta name="author" content={author} />
-        <meta name="description" content={metaDescription} />
-        <meta name="og:description" content={metaDescription} />
+        <meta name="author" content='Shoha_Coder' />
+        <meta name="description" content='Front-end developer (JSX & TSX), web developer. Operational layout. I work with observance of terms and performance of Test tasks.' />
+        <meta name="og:description" content='Front-end developer (JSX & TSX), web developer. Operational layout. I work with observance of terms and performance of Test tasks.' />
         <meta
           name="google-site-verification"
           content="LEHoGtjiPhe7nBgOSzpT3Top-nNKx1eaBlllOPQLn8o"
@@ -54,15 +52,15 @@ const SEO: React.FC<SeoProps> = ({
           content="https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v3/shoha-coder.uz/Shoha_Coder%20-%20Portfolio/https%3A%2F%2Fshoha-coder.uz%2Fopengraph.png/og.png"
         />
         <meta
-          property="telegram:image"
+          property="og:image"
           content="https://ogcdn.net/e4b8c678-7bd5-445d-ba03-bfaad510c686/v3/shoha-coder.uz/Shoha_Coder%20-%20Portfolio/https%3A%2F%2Fshoha-coder.uz%2Fopengraph.png/og.png"
         />
         <meta
-          name="telegram:description"
+          property="og:description"
           content="Front-end developer (JSX & TSX), web developer. Operational layout. I work with observance of terms and performance of Test tasks."
         />
+        <meta property="og:site" content="@shoha_coder" />
         <meta name="twitter:site" content="@shoha_coder" />
-        <meta name="telegram:site" content="@shoha_coder" />
       </Head>
       {children}
     </>
