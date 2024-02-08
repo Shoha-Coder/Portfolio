@@ -9,21 +9,15 @@
   margin: toRem(69) auto;
   .Children {
     height: toRem(821.81);
+    &.Projects{
+      min-height: toRem(600);
+      height: auto;
+    }
   }
 }
 @include BreakpointDown(1888) {
   .Container {
     margin: toRem(69);
-  }
-}
-@include BreakpointDown(1555) {
-  .Container {
-    .Children {
-      &.Projects {
-        min-height: toRem(600);
-        height: auto;
-      }
-    }
   }
 }
 @include BreakpointDown(1126) {
