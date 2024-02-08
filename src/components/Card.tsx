@@ -13,7 +13,6 @@ const Card: React.FC<Card> = ({
   ProjectLink,
   name,
   categoryid,
-  CategoryImageClass,
   ProjectNameClass,
 }): React.ReactElement => {
   const [bodyWidth, setBodyWidth] = useState<number>(0);
@@ -55,7 +54,7 @@ const Card: React.FC<Card> = ({
         />
         <Image
           src={CategoryImage}
-          className={`${Style.CategoryImage} ${CategoryImageClass}`}
+          className={`${Style.CategoryImage}`}
           alt=""
         />
         <p className={Style.Description}>{description}</p>

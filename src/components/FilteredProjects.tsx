@@ -33,7 +33,6 @@ const ReactContent: React.FC = (): React.ReactElement => {
                 name={project.name}
                 categoryid={project.categoryid}
                 ProjectNameClass={Style.ProjectNameClass}
-                CategoryImageClass=""
               />
             </div>
           );
@@ -64,7 +63,6 @@ const NextjsContent: React.FC = (): React.ReactElement => {
                 name={project.name}
                 categoryid={project.categoryid}
                 ProjectNameClass={Style.ProjectNameClass}
-                CategoryImageClass=""
               />
             </div>
           );
@@ -95,7 +93,6 @@ const ViteContent: React.FC = (): React.ReactElement => {
                 name={project.name}
                 categoryid={project.categoryid}
                 ProjectNameClass={Style.ProjectNameClass}
-                CategoryImageClass=""
               />
             </div>
           );
@@ -110,9 +107,10 @@ const AllContent: React.FC = (): React.ReactElement => {
       .get("https://back.shoha-coder.uz/projects")
       .then((response: AxiosResponse): void => setProjects(response.data));
   }, []);
+  const data: any = projects;
   return (
     <div className={Style.Content}>
-      {projects.map((project: Project): React.ReactElement => {
+      {data.map((project: Project): React.ReactElement => {
         let CategoryImage: StaticImageData = ReactIcon;
         if (project.category === "React") {
           CategoryImage = ReactIcon;
@@ -129,7 +127,6 @@ const AllContent: React.FC = (): React.ReactElement => {
               description={`${project.description.substring(0, 50)}...`}
               AltText={project.AltText}
               ProjectLink={project.link}
-              CategoryImageClass=""
               name={project.name}
               categoryid={project.categoryid}
               ProjectNameClass={Style.ProjectNameClass}
