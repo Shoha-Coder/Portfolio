@@ -11,8 +11,6 @@ const Home: React.FC = (): React.ReactElement => {
     <SEO
       metaTitle="Shoha-Coder | Home"
       metaKeywords={process.env.META_KEYWORD_HOME || ""}
-      metaDescription="Front-end developer (JSX & TSX), web developer. Operational layout. I work with observance of terms and performance of Test tasks."
-      author="Shoha Coder"
     >
       <Container>
         <div className={Style.Home}>

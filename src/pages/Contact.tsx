@@ -10,8 +10,6 @@ const Contact: React.FC = (): React.ReactElement => {
     <SEO
       metaTitle="Shoha-Coder | Contact"
       metaKeywords={process.env.META_KEYWORD_CONTACT || ""}
-      metaDescription="Shoha Coder's Portfolio Contact Page"
-      author="Shoha Coder"
     >
       <Container>
         <div className={Style.Contact}>

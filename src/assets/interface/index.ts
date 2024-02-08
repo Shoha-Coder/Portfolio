@@ -22,8 +22,6 @@ export interface Data {
 export interface SeoProps {
   children: ReactNode;
   metaTitle: string;
-  metaDescription: string;
-  author: string;
   metaKeywords: string;
 }
 
