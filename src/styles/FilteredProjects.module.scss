@@ -66,6 +66,7 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       padding-top: toRem(115.18);
+      gap: toRem(50) toRem(0);
       .ProjectNameClass {
         display: flex;
         gap: toRem(10);
