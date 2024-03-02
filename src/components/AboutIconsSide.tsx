@@ -36,7 +36,7 @@ const AboutIconsSide: React.FC = (): React.ReactElement => {
   }
   return (
     <div className={Style.AboutIconsSide}>
-      <Image
+      <Image draggable={false}
         src={ProfessionalInfo}
         alt="ProfessionalInfoIcon"
         className={`${Style.Icon} ${
@@ -44,7 +44,7 @@ const AboutIconsSide: React.FC = (): React.ReactElement => {
         }`}
         onClick={(): void => ProfessionalClick()}
       />
-      <Image
+      <Image draggable={false}
         src={PersonalInfo}
         alt="PersonalInfoIcon"
         className={`${Style.Icon} ${Style.PersonalInfo} ${
@@ -52,7 +52,7 @@ const AboutIconsSide: React.FC = (): React.ReactElement => {
         }`}
         onClick={(): void => PersonalClick()}
       />
-      <Image
+      <Image draggable={false}
         src={Hobbies}
         alt="HobbiesIcon"
         className={`${Style.Icon} ${

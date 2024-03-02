@@ -12,7 +12,7 @@ const FoodLeft: React.FC<FoodLeft> = ({
     <div className={Style.Images}>
       {[...Array(10)].map((food: number, index: number): React.ReactElement => {
         return (
-          <Image
+          <Image draggable={false}
             src={index < foodLeft ? FoodDisabled : FoodActive}
             alt="error"
             key={index}

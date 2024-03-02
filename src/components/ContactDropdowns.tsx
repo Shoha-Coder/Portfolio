@@ -48,7 +48,7 @@ const ContactDropdowns: React.FC = (): React.ReactElement => {
           onClick={(): void => ContactClick()}
           className={`${Style.Title} ${isContactActive ? Style.Active : ""}`}
         >
-          <Image
+          <Image draggable={false}
             src={unActiveDropdownIcon}
             className={Style.DropdownIcon}
             alt="Dropdown"
@@ -71,7 +71,7 @@ const ContactDropdowns: React.FC = (): React.ReactElement => {
             isContactActive === true ? Style.Bt : ""
           }`}
         >
-          <Image
+          <Image draggable={false}
             src={unActiveDropdownIcon}
             className={Style.DropdownIcon}
             alt="Dropdown"

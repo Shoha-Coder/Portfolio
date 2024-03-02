@@ -11,7 +11,7 @@ const Food: React.FC<Food> = ({ dot }): React.ReactElement => {
   };
 
   return (
-    <Image
+    <Image draggable={false}
       src={SnakesFood}
       alt="Snake's Food"
       className={Style.food}

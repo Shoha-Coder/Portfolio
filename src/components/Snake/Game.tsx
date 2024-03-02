@@ -274,7 +274,7 @@ class Game extends Component<{}, GameState> {
     return (
       <div className={Style.wrapper_game_over}>
         <div className={Style.game_area_game_over}>
-          <Image src={GameOverImg} alt="" />
+          <Image draggable={false} src={GameOverImg} alt="" />
           <h1>GAME OVER!</h1>
           <h4 onClick={() => window.location.replace("/")}>start-again</h4>
         </div>
@@ -287,7 +287,7 @@ class Game extends Component<{}, GameState> {
     return (
       <div className={Style.wrapper_game_over}>
         <div className={Style.game_area_game_win}>
-          <Image src={GmeWinImg} alt="" />
+          <Image draggable={false} src={GmeWinImg} alt="" />
           <h1>WELL DONE!</h1>
           <h4 onClick={() => window.location.replace("/")}>play-again</h4>
         </div>
@@ -303,11 +303,11 @@ class Game extends Component<{}, GameState> {
           <h3>// use keyboard</h3>
           <h3>// arrows to play</h3>
           <div className={Style.Buttons}>
-            <Image src={Up} className={Style.Up} alt="" onClick={this.onUp} />
+            <Image draggable={false} src={Up} className={Style.Up} alt="" onClick={this.onUp} />
             <div className={Style.bottom}>
-              <Image src={Left} alt="" onClick={this.onLeft} />
-              <Image src={Down} alt="" onClick={this.onDown} />
-              <Image src={Right} alt="" onClick={this.onRight} />
+              <Image draggable={false} src={Left} alt="" onClick={this.onLeft} />
+              <Image draggable={false} src={Down} alt="" onClick={this.onDown} />
+              <Image draggable={false} src={Right} alt="" onClick={this.onRight} />
             </div>
           </div>
         </div>

@@ -136,7 +136,7 @@ const ProjectsFilterSide: React.FC = (): React.ReactElement => {
           className={`${Style.Title} 
                 ${dropdown === true ? Style.Active : ""}`}
         >
-          <Image
+          <Image draggable={false}
             src={unActiveDropdownIcon}
             className={Style.DropdownIcon}
             alt="Dropdown"

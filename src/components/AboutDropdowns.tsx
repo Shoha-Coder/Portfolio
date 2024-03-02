@@ -219,7 +219,7 @@ const AboutDropdowns: React.FC = (): React.ReactElement => {
           className={`${Style.Title} 
                 ${isPersonalInfoActive === true ? Style.Active : ""}`}
         >
-          <Image
+          <Image draggable={false}
             src={unActiveDropdownIcon}
             className={Style.DropdownIcon}
             alt="Dropdown"
@@ -237,7 +237,7 @@ const AboutDropdowns: React.FC = (): React.ReactElement => {
               isBioActive === true ? Style.Active : ""
             }`}
           >
-            <Image
+            <Image draggable={false}
               src={FolderToggleIcon}
               alt=""
               className={`${Style.FolderToggleIcon} ${
@@ -252,7 +252,7 @@ const AboutDropdowns: React.FC = (): React.ReactElement => {
             }`}
             onClick={(): void => BioFileClick()}
           >
-            <Image src={FileIcon} alt="" className={Style.FileIcon} /> bio
+            <Image draggable={false} src={FileIcon} alt="" className={Style.FileIcon} /> bio
           </div>
           <h3
             onClick={(): void => InterestsClick()}
@@ -260,7 +260,7 @@ const AboutDropdowns: React.FC = (): React.ReactElement => {
               isInterestsActive === true ? Style.Active : ""
             }`}
           >
-            <Image
+            <Image draggable={false}
               src={FolderToggleIcon}
               alt=" "
               className={`${Style.FolderToggleIcon} ${
@@ -275,7 +275,7 @@ const AboutDropdowns: React.FC = (): React.ReactElement => {
             }`}
             onClick={(): void => InterestsFileClick()}
           >
-            <Image src={FileIcon} alt=" " className={Style.FileIcon} />{" "}
+            <Image draggable={false} src={FileIcon} alt=" " className={Style.FileIcon} />{" "}
             interests
           </div>
           <h3
@@ -284,7 +284,7 @@ const AboutDropdowns: React.FC = (): React.ReactElement => {
               isEducationActive === true ? Style.Active : ""
             }`}
           >
-            <Image
+            <Image draggable={false}
               src={FolderToggleIcon}
               alt=" "
               className={`${Style.FolderToggleIcon} ${
@@ -299,7 +299,7 @@ const AboutDropdowns: React.FC = (): React.ReactElement => {
             }`}
             onClick={(): void => EduFileClick()}
           >
-            <Image src={FileIcon} alt=" " className={Style.FileIcon} />{" "}
+            <Image draggable={false} src={FileIcon} alt=" " className={Style.FileIcon} />{" "}
             education
           </div>
         </div>
@@ -310,7 +310,7 @@ const AboutDropdowns: React.FC = (): React.ReactElement => {
           className={`${Style.Title} 
                 ${isProfessionalInfoActive === true ? Style.Active : ""}`}
         >
-          <Image
+          <Image draggable={false}
             src={unActiveDropdownIcon}
             className={Style.DropdownIcon}
             alt="Dropdown"
@@ -328,7 +328,7 @@ const AboutDropdowns: React.FC = (): React.ReactElement => {
             }`}
             onClick={(): void => ProfessionalFileClick()}
           >
-            <Image src={FileIcon} alt="" className={Style.FileIcon} />{" "}
+            <Image draggable={false} src={FileIcon} alt="" className={Style.FileIcon} />{" "}
             professional-info
           </div>
         </div>
@@ -339,7 +339,7 @@ const AboutDropdowns: React.FC = (): React.ReactElement => {
           className={`${Style.Title} 
                 ${isHobbiesActive === true ? Style.Active : ""}`}
         >
-          <Image
+          <Image draggable={false}
             src={unActiveDropdownIcon}
             className={Style.DropdownIcon}
             alt="Dropdown"
@@ -357,7 +357,7 @@ const AboutDropdowns: React.FC = (): React.ReactElement => {
             }`}
             onClick={(): void => HobbiesFileClick()}
           >
-            <Image src={FileIcon} alt="" className={Style.FileIcon} /> hobbies
+            <Image draggable={false} src={FileIcon} alt="" className={Style.FileIcon} /> hobbies
           </div>
         </div>
       </div>
@@ -367,7 +367,7 @@ const AboutDropdowns: React.FC = (): React.ReactElement => {
           className={`${Style.Title} 
                 ${isContactsActive === true ? Style.Active : ""}`}
         >
-          <Image
+          <Image draggable={false}
             src={unActiveDropdownIcon}
             className={Style.DropdownIcon}
             alt="Dropdown"

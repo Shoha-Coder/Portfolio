@@ -45,14 +45,14 @@ const Card: React.FC<Card> = ({
         {name}
       </p>
       <div className={`${Style.Card} ${className}`}>
-        <Image
+        <Image draggable={false}
           src={ProjectImage}
           className={Style.ProjectImage}
           width={10}
           height={1}
           alt={AltText}
         />
-        <Image
+        <Image draggable={false}
           src={CategoryImage}
           className={`${Style.CategoryImage}`}
           alt=""

@@ -8,7 +8,7 @@ import { Menu } from "@/assets/interface";
 const Menu: React.FC<Menu> = ({ onRouteChange }) => {
   return (
     <div className={Style.game_area_}>
-      <Image src={img} alt="img" />
+      <Image draggable={false} src={img} alt="img" />
       <Button className="" onClick={onRouteChange}>
         Start-game
       </Button>
