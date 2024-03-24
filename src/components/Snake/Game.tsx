@@ -179,12 +179,14 @@ class Game extends Component<{}, GameState> {
     this.setState({
       route: "gameOver",
     });
+    document.body.style.overflow = "auto";
   }
 
   gameWin(): void {
     this.setState({
       route: "gameWin",
     });
+    document.body.style.overflow = "auto";
   }
 
   onDown = (): void => this.updateDirection("DOWN");
