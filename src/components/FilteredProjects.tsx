@@ -128,7 +128,7 @@ const AllContent: React.FC = (): React.ReactElement => {
               AltText={project.AltText}
               ProjectLink={project.link}
               name={project.name}
-              categoryid={project.categoryid}
+              categoryid={project.id}
               ProjectNameClass={Style.ProjectNameClass}
             />
           </div>
