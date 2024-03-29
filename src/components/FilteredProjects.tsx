@@ -14,7 +14,7 @@ const ReactContent: React.FC = (): React.ReactElement => {
   const [projects, setProjects] = useState<[]>([]);
   useEffect((): void => {
     axios
-      .get("https://back.shoha-coder.uz/projects")
+      .get("https://my-json-server.typicode.com/shoha-coder/portfolio-back/projects")
       .then((response: AxiosResponse): void => setProjects(response.data));
   }, []);
   return (
@@ -25,7 +25,7 @@ const ReactContent: React.FC = (): React.ReactElement => {
           return (
             <div key={project.id}>
               <Card
-                ProjectImage={"/images" + project.ProjectImage}
+                ProjectImage={project.ProjectImage}
                 CategoryImage={ReactIcon}
                 description={`${project.description.substring(0, 50)}...`}
                 AltText={project.AltText}
@@ -44,7 +44,7 @@ const NextjsContent: React.FC = (): React.ReactElement => {
   const [projects, setProjects] = useState<[]>([]);
   useEffect((): void => {
     axios
-      .get("https://back.shoha-coder.uz/projects")
+      .get("https://my-json-server.typicode.com/shoha-coder/portfolio-back/projects")
       .then((response: AxiosResponse): void => setProjects(response.data));
   }, []);
   return (
@@ -55,7 +55,7 @@ const NextjsContent: React.FC = (): React.ReactElement => {
           return (
             <div key={project.id}>
               <Card
-                ProjectImage={"/images" + project.ProjectImage}
+                ProjectImage={project.ProjectImage}
                 CategoryImage={NextjsIcon}
                 description={`${project.description.substring(0, 50)}...`}
                 AltText={project.AltText}
@@ -74,7 +74,7 @@ const ViteContent: React.FC = (): React.ReactElement => {
   const [projects, setProjects] = useState<[]>([]);
   useEffect((): void => {
     axios
-      .get("https://back.shoha-coder.uz/projects")
+      .get("https://my-json-server.typicode.com/shoha-coder/portfolio-back/projects")
       .then((response: AxiosResponse): void => setProjects(response.data));
   }, []);
   return (
@@ -85,7 +85,7 @@ const ViteContent: React.FC = (): React.ReactElement => {
           return (
             <div key={project.id}>
               <Card
-                ProjectImage={"/images" + project.ProjectImage}
+                ProjectImage={project.ProjectImage}
                 CategoryImage={ViteIcon}
                 description={`${project.description.substring(0, 50)}...`}
                 AltText={project.AltText}
@@ -104,13 +104,12 @@ const AllContent: React.FC = (): React.ReactElement => {
   const [projects, setProjects] = useState<[]>([]);
   useEffect((): void => {
     axios
-      .get("https://back.shoha-coder.uz/projects")
+      .get("https://my-json-server.typicode.com/shoha-coder/portfolio-back/projects")
       .then((response: AxiosResponse): void => setProjects(response.data));
   }, []);
-  const data: any = projects;
   return (
     <div className={Style.Content}>
-      {data.map((project: Project): React.ReactElement => {
+      {projects.map((project: Project): React.ReactElement => {
         let CategoryImage: StaticImageData = ReactIcon;
         if (project.category === "React") {
           CategoryImage = ReactIcon;
@@ -122,7 +121,7 @@ const AllContent: React.FC = (): React.ReactElement => {
         return (
           <div key={project.id}>
             <Card
-              ProjectImage={"/images" + project.ProjectImage}
+              ProjectImage={project.ProjectImage}
               CategoryImage={CategoryImage}
               description={`${project.description.substring(0, 50)}...`}
               AltText={project.AltText}
