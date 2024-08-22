@@ -12,7 +12,7 @@ const ProfessionalInfoTabContent: React.FC = (): React.ReactElement => {
         <li>/**</li>
         <li>
           * You can download my professional information{" "}
-          <a href={"/Shoha-Coder CV.pdf"} download>
+          <a href={"https://links.shoha-coder.uz/portfolio/Shoha-Coder%20CV.pdf"} download>
             here
           </a>
         </li>
